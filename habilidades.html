@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /> <!-- Charset UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsivo -->
+  <title>Skills | Bryyan.Dev</title> <!-- Título da aba -->
+  <link rel="stylesheet" href="style.css" /> <!-- CSS principal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Pré-conexão Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" /> <!-- Fonte Orbitron -->
+  <script src="https://unpkg.com/lucide@latest"></script> <!-- Ícones Lucide -->
+</head>
+<body class="dark-theme"> <!-- Força tema escuro -->
+
+  <!-- Cabeçalho -->
+  <header>
+    <nav>
+      <div class="logo"><h1>PortFolio</h1></div> <!-- Logo -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">About</a></li>
+        <li><a href="habilidades.html" class="active">Skills</a></li>
+        <li><a href="projetos.html">Projects</a></li>
+        <li><a href="contato.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção de habilidades -->
+  <section class="section habilidades">
+    <h2>My Skills</h2> <!-- Título da seção -->
+
+    <!-- Grid de habilidades em círculos -->
+    <div class="skills-grid">
+      <!-- Cada skill em um círculo -->
+      <div class="skill-circle" data-percent="85">
+        <svg>
+          <circle class="bg" cx="50%" cy="50%" r="45"></circle>
+          <circle class="progress" cx="50%" cy="50%" r="45"></circle>
+        </svg>
+        <div class="skill-info">
+          <span class="percent">0%</span>
+          <p>JavaScript</p>
+        </div>
+      </div>
+
+      <div class="skill-circle" data-percent="75">
+        <svg>
+          <circle class="bg" cx="50%" cy="50%" r="45"></circle>
+          <circle class="progress" cx="50%" cy="50%" r="45"></circle>
+        </svg>
+        <div class="skill-info">
+          <span class="percent">0%</span>
+          <p>React.js</p>
+        </div>
+      </div>
+
+      <div class="skill-circle" data-percent="90">
+        <svg>
+          <circle class="bg" cx="50%" cy="50%" r="45"></circle>
+          <circle class="progress" cx="50%" cy="50%" r="45"></circle>
+        </svg>
+        <div class="skill-info">
+          <span class="percent">0%</span>
+          <p>HTML5 &amp; CSS3</p>
+        </div>
+      </div>
+
+      <div class="skill-circle" data-percent="70">
+        <svg>
+          <circle class="bg" cx="50%" cy="50%" r="45"></circle>
+          <circle class="progress" cx="50%" cy="50%" r="45"></circle>
+        </svg>
+        <div class="skill-info">
+          <span class="percent">0%</span>
+          <p>Node.js</p>
+        </div>
+      </div>
+
+      <div class="skill-circle" data-percent="80">
+        <svg>
+          <circle class="bg" cx="50%" cy="50%" r="45"></circle>
+          <circle class="progress" cx="50%" cy="50%" r="45"></circle>
+        </svg>
+        <div class="skill-info">
+          <span class="percent">0%</span>
+          <p>Git &amp; GitHub</p>
+        </div>
+      </div>
+
+      <div class="skill-circle" data-percent="65">
+        <svg>
+          <circle class="bg" cx="50%" cy="50%" r="45"></circle>
+          <circle class="progress" cx="50%" cy="50%" r="45"></circle>
+        </svg>
+        <div class="skill-info">
+          <span class="percent">0%</span>
+          <p>UI/UX Design</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Bryyan.Dev • All rights reserved</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script> <!-- JS principal -->
+  <script>
+    lucide.createIcons(); // Renderiza ícones
+
+    // Animação de carregamento das porcentagens
+    document.querySelectorAll('.skill-circle').forEach(circle => {
+      const percent = circle.getAttribute('data-percent');
+      const progressCircle = circle.querySelector('.progress');
+      const percentText = circle.querySelector('.percent');
+      const radius = progressCircle.r.baseVal.value;
+      const circumference = 2 * Math.PI * radius;
+
+      progressCircle.style.strokeDasharray = circumference;
+      progressCircle.style.strokeDashoffset = circumference;
+
+      let currentPercent = 0;
+      const animation = setInterval(() => {
+        currentPercent++;
+        percentText.textContent = `${currentPercent}%`;
+        const offset = circumference - (currentPercent / 100) * circumference;
+        progressCircle.style.strokeDashoffset = offset;
+
+        if (currentPercent >= percent) {
+          clearInterval(animation);
+        }
+      }, 20);
+    });
+  </script>
+</body>
+</html>

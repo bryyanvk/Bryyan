@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /> <!-- Charset UTF-8 para suportar caracteres especiais -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Tornar responsivo -->
+  <title>Home | Bryyan.Dev</title> <!-- Título da aba -->
+  <link rel="stylesheet" href="style.css" /> <!-- Arquivo CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Pré-conexão Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" /> <!-- Fonte Orbitron -->
+  <script src="https://unpkg.com/lucide@latest"></script> <!-- Ícones Lucide -->
+</head>
+<body class="dark-theme"> <!-- Força tema escuro -->
+
+  <!-- Cabeçalho -->
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>PortFolio</h1> <!-- Nome/logo -->
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active"><i data-lucide="home"></i> Home</a></li>
+        <li><a href="sobre.html"><i data-lucide="user"></i> About</a></li>
+        <li><a href="habilidades.html"><i data-lucide="code"></i> Skills</a></li>
+        <li><a href="projetos.html"><i data-lucide="folder"></i> Projects</a></li>
+        <li><a href="contato.html"><i data-lucide="mail"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção inicial -->
+  <section class="section inicio">
+    <div class="intro">
+      <h2><i data-lucide="home"></i> Welcome to my Portfolio</h2> <!-- Título -->
+      <p>
+        Developer passionate about technology, futuristic design, and creating unique digital experiences.
+      </p>
+    </div>
+
+    <!-- Foto de perfil -->
+    <div class="foto-container">
+      <img src="euu.jpg" alt="My Photo" class="user-foto" /> <!-- Substituir pela foto real -->
+    </div>
+
+    <!-- Botões de navegação -->
+    <div class="botoes-navegacao">
+      <a href="sobre.html" class="btn-section">About Me</a>
+      <a href="projetos.html" class="btn-section">Projects</a>
+      <a href="contato.html" class="btn-section">Contact</a>
+    </div>
+
+    <!-- Botão GitHub -->
+    <div class="github-acesso">
+      <a href="https://github.com/seuusuario/seusite" target="_blank" class="btn-github">
+        <i data-lucide="github"></i> View code on GitHub
+      </a>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Bryyan.Dev • All rights reserved</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script> <!-- JS principal -->
+  <script>
+    lucide.createIcons(); // Renderiza ícones Lucide
+  </script>
+</body>
+</html>

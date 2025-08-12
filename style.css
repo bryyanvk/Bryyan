@@ -1,0 +1,587 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte padrão — Arial */
+body {
+  font-family: Arial, sans-serif; /* Fonte alterada para Arial */
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* fundo e cor por tema */
+}
+
+/* Tema escuro - padrão */
+body.dark-theme {
+  background-color: #0b0c10; /* Fundo escuro padrão */
+  color: #c5c6c7; /* Texto claro padrão */
+}
+
+/* Tema claro */
+body.light-theme {
+  background-color: #1a1515;
+  color: #222;
+}
+
+/* Links nav */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: Arial, sans-serif; /* Arial nos links */
+}
+
+a:hover {
+  color: #66fcf1;
+}
+
+/* Header / Navegação */
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+body.dark-theme .logo h1 {
+  color: #45a29e;
+}
+
+body.light-theme .logo h1 {
+  color: #2c3e50;
+}
+
+.logo h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: default;
+  user-select: none;
+  letter-spacing: 2px;
+  font-family: Arial, sans-serif; /* Forçar Arial na logo */
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-links li a {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  font-family: Arial, sans-serif; /* garantir Arial nos links */
+  color: inherit;
+}
+
+/* Nav links ativo/hover tema escuro */
+body.dark-theme .nav-links li a.active,
+body.dark-theme .nav-links li a:hover {
+  background-color: #45a29e;
+  color: #0b0c10;
+  transition: background-color 0.3s ease;
+}
+
+/* Nav links ativo/hover tema claro */
+body.light-theme .nav-links li a.active,
+body.light-theme .nav-links li a:hover {
+  background-color: #3498db;
+  color: #f5f5f5;
+  transition: background-color 0.3s ease;
+}
+
+/* Controles tema e idioma */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Botão tema */
+body.dark-theme #themeToggle {
+  background: transparent;
+  border: 2px solid #45a29e;
+  color: #45a29e;
+}
+
+body.light-theme #themeToggle {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+body.dark-theme #themeToggle:hover {
+  background-color: #45a29e;
+  color: #0b0c10;
+}
+
+body.light-theme #themeToggle:hover {
+  background-color: #3498db;
+  color: #f5f5f5;
+}
+
+/* Select idioma */
+body.dark-theme #languageToggle {
+  background-color: #0b0c10;
+  color: #66fcf1;
+  border: 2px solid #45a29e;
+}
+
+body.light-theme #languageToggle {
+  background-color: #f5f5f5;
+  color: #3498db;
+  border: 2px solid #3498db;
+}
+
+body.dark-theme #languageToggle:hover {
+  background-color: #45a29e;
+  color: #0b0c10;
+}
+
+body.light-theme #languageToggle:hover {
+  background-color: #2980b9;
+  color: #f5f5f5;
+}
+
+/* Seções gerais */
+.section {
+  max-width: 900px;
+  margin: 3rem auto 5rem auto;
+  padding: 0 1rem;
+  font-family: Arial, sans-serif; /* Arial no conteúdo */
+}
+
+/* Títulos das seções */
+body.dark-theme .section h2 {
+  font-size: 2.8rem;
+  color: #66fcf1;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 0 0 10px #45a29e;
+}
+
+body.light-theme .section h2 {
+  font-size: 2.8rem;
+  color: #3498db;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: none;
+}
+
+/* Texto das seções */
+body.dark-theme .section p {
+  font-size: 1.25rem;
+  color: #c5c6c7;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+body.light-theme .section p {
+  font-size: 1.25rem;
+  color: #222;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid habilidades */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.3rem;
+  margin-top: 2rem;
+}
+
+.skill {
+  background: #1f2833;
+  padding: 1.2rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 700;
+  color: #66fcf1;
+  font-size: 1.15rem;
+  box-shadow: 0 0 10px #45a29e88;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  user-select: none;
+  font-family: Arial, sans-serif; /* Arial nas skills */
+}
+
+body.light-theme .skill {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  box-shadow: 0 0 10px #2980b9aa;
+}
+
+.skill:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #45a29eee;
+}
+
+body.light-theme .skill:hover {
+  box-shadow: 0 0 20px #2980b9ee;
+}
+
+/* Grid projetos */
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.projeto-card {
+  background: #1f2833;
+  padding: 1.8rem;
+  border-radius: 14px;
+  box-shadow: 0 0 12px #45a29eaa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  user-select: none;
+  font-family: Arial, sans-serif; /* Arial nos cards */
+}
+
+body.light-theme .projeto-card {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  box-shadow: 0 0 10px #2980b9aa;
+}
+
+.projeto-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 24px #45a29eee;
+}
+
+body.light-theme .projeto-card:hover {
+  box-shadow: 0 0 20px #2980b9ee;
+}
+
+.projeto-card h3 {
+  color: #66fcf1;
+  margin-bottom: 0.7rem;
+  font-family: Arial, sans-serif;
+}
+
+body.light-theme .projeto-card h3 {
+  color: #3498db;
+}
+
+.projeto-card p {
+  color: #c5c6c7;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+body.light-theme .projeto-card p {
+  color: #222;
+}
+
+/* Botões gerais */
+.btn {
+  display: inline-block;
+  background-color: #45a29e;
+  color: #0b0c10;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+.btn:hover {
+  background-color: #66fcf1;
+  color: #1f2833;
+}
+
+/* Grid contato */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.6rem;
+  margin-top: 2rem;
+}
+
+.contact-card {
+  background: #1f2833;
+  padding: 1.4rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 12px #45a29eaa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  user-select: none;
+  font-family: Arial, sans-serif;
+}
+
+body.light-theme .contact-card {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  box-shadow: 0 0 10px #2980b9aa;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 24px #45a29eee;
+}
+
+body.light-theme .contact-card:hover {
+  box-shadow: 0 0 20px #2980b9ee;
+}
+
+.contact-card i {
+  color: #66fcf1;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 0.6rem;
+}
+
+.contact-card h3 {
+  color: #66fcf1;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+}
+
+body.light-theme .contact-card h3 {
+  color: #3498db;
+}
+
+.contact-card p {
+  color: #c5c6c7;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+body.light-theme .contact-card p {
+  color: #222;
+}
+
+/* Botões de contato */
+.connect-buttons {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.connect-buttons .btn {
+  padding: 0.75rem 1.8rem;
+}
+
+/* Estatísticas rápidas */
+.quick-stats {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.stat h3 {
+  color: #66fcf1;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+body.light-theme .stat h3 {
+  color: #3498db;
+}
+
+.stat p {
+  color: #c5c6c7;
+  font-size: 1rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+body.light-theme .stat p {
+  color: #222;
+}
+
+/* CTA final */
+.cta-final {
+  margin-top: 3.5rem;
+  background: #1f2833;
+  padding: 2rem 1.5rem;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 0 20px #45a29eaa;
+  font-family: Arial, sans-serif;
+  color: #c5c6c7;
+}
+
+body.light-theme .cta-final {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  box-shadow: 0 0 10px #2980b9aa;
+}
+
+.cta-final h2 {
+  color: #66fcf1;
+  margin-bottom: 1rem;
+}
+
+body.light-theme .cta-final h2 {
+  color: #3498db;
+}
+
+.cta-final p {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Rodapé */
+footer {
+  background-color: #1f2833;
+  padding: 1rem 0;
+  text-align: center;
+  color: #45a29e;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  user-select: none;
+  font-family: Arial, sans-serif;
+}
+
+body.light-theme footer {
+  background-color: #e0e0e0;
+  color: #2c3e50;
+}
+
+/* Scroll suave para links internos */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animação keyframe para conteúdo subir */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplica animação nas seções */
+.section {
+  animation: slideUp 0.7s ease forwards;
+}
+
+/* Cursor pointer para botões e links */
+button, .btn {
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+/* =================== Estilo para os botões “Sobre”, “Projetos” e “Contato” na home =================== */
+.botoes-navegacao {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-section {
+  display: inline-block;
+  padding: 12px 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #45a29e; /* cor principal do seu site */
+  border-radius: 10px;
+  color: #45a29e;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  user-select: none;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+}
+
+body.light-theme .btn-section {
+  background-color: #45a29e;
+  color: #0b0c10;
+  border: none;
+  backdrop-filter: none;
+}
+
+.btn-section:hover {
+  background: #45a29e;
+  color: #0b0c10;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(69, 162, 158, 0.6);
+}
+
+body.light-theme .btn-section:hover {
+  background-color: #66fcf1;
+  color: #1f2833;
+}
+
+/* =================== Estilo para foto circular centralizada =================== */
+.foto-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.user-foto {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px #45a29e, 0 0 40px #66fcf1aa;
+  border: 4px solid #45a29e;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.user-foto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #66fcf1f0, 0 0 50px #45a29eee;
+}
+
+/* =================== Adicionado: Botões grandes da home centralizados =================== */
+.botoes-navegacao {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.btn-section {
+  background-color: #45a29e;
+  color: #0b0c10;
+  padding: 0.8rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.btn-section:hover {
+  background-color: #66fcf1;
+  color: #1f2833;
+}
