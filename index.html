@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /> <!-- Charset UTF-8 para suportar caracteres especiais -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Tornar responsivo -->
-  <title>Home | Bryyan.Dev</title> <!-- Título da aba -->
-  <link rel="stylesheet" href="style.css" /> <!-- Arquivo CSS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Pré-conexão Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" /> <!-- Fonte Orbitron -->
-  <script src="https://unpkg.com/lucide@latest"></script> <!-- Ícones Lucide -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Bryyan.Dev</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="dark-theme"> <!-- Força tema escuro -->
+<body class="dark-theme">
 
   <!-- Cabeçalho -->
   <header>
-    <nav>
+    <nav class="navbar">
       <div class="logo">
-        <h1>PortFolio</h1> <!-- Nome/logo -->
+        <h1>PortFolio</h1>
       </div>
-      <ul class="nav-links">
+
+      <!-- Botão hambúrguer (mobile) -->
+      <div class="hamburger" id="menu-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <!-- Links -->
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html" class="active"><i data-lucide="home"></i> Home</a></li>
         <li><a href="sobre.html"><i data-lucide="user"></i> About</a></li>
         <li><a href="habilidades.html"><i data-lucide="code"></i> Skills</a></li>
@@ -30,25 +39,22 @@
   <!-- Seção inicial -->
   <section class="section inicio">
     <div class="intro">
-      <h2><i data-lucide="home"></i> Welcome to my Portfolio</h2> <!-- Título -->
+      <h2><i data-lucide="home"></i> Welcome to my Portfolio</h2>
       <p>
         Developer passionate about technology, futuristic design, and creating unique digital experiences.
       </p>
     </div>
 
-    <!-- Foto de perfil -->
     <div class="foto-container">
-      <img src="euu.jpg" alt="My Photo" class="user-foto" /> <!-- Substituir pela foto real -->
+      <img src="euu.jpg" alt="My Photo" class="user-foto" />
     </div>
 
-    <!-- Botões de navegação -->
     <div class="botoes-navegacao">
       <a href="sobre.html" class="btn-section">About Me</a>
       <a href="projetos.html" class="btn-section">Projects</a>
       <a href="contato.html" class="btn-section">Contact</a>
     </div>
 
-    <!-- Botão GitHub -->
     <div class="github-acesso">
       <a href="https://github.com/seuusuario/seusite" target="_blank" class="btn-github">
         <i data-lucide="github"></i> View code on GitHub
@@ -56,15 +62,20 @@
     </div>
   </section>
 
-  <!-- Rodapé -->
-  <footer>
-    <p>© 2025 Bryyan.Dev • All rights reserved</p>
-  </footer>
+ 
 
   <!-- Scripts -->
-  <script src="script.js"></script> <!-- JS principal -->
+  <script src="script.js"></script>
   <script>
-    lucide.createIcons(); // Renderiza ícones Lucide
+    lucide.createIcons();
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('show');
+    });
   </script>
 </body>
 </html>

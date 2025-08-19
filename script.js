@@ -1,23 +1,21 @@
-// ================== CONFIGURAÇÃO DO SITE FIXO EM TEMA ESCURO ================== //
+// ================== CONFIGURAÇÃO DO SITE ==================
 document.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.add("dark-theme"); // Força tema escuro em todas as páginas
+  document.body.classList.add("dark-theme"); // Força tema escuro
   if (window.lucide) lucide.createIcons(); // Ativa ícones Lucide
-});
 
-// ================== EFEITO HOVER COM CARREGAMENTO EM BOTÕES/INPUTS ================== //
-document.querySelectorAll("button, .btn, .btn-section, input, textarea").forEach(el => {
-  el.addEventListener("mouseenter", () => {
-    el.classList.add("hover-loading"); // Classe CSS para animação de carregamento
+  // ================== HOVER “CARREGAMENTO” ==================
+  document.querySelectorAll("button, .btn, .btn-section, input, textarea, .nav-links li a").forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      el.classList.add("hover-loading");
+    });
+    el.addEventListener("mouseleave", () => {
+      el.classList.remove("hover-loading");
+    });
   });
-  el.addEventListener("mouseleave", () => {
-    el.classList.remove("hover-loading");
-  });
-});
 
-// ================== ANIMAÇÃO DE PERCENTUAIS NAS HABILIDADES ================== //
-document.addEventListener("DOMContentLoaded", () => {
+  // ================== ANIMAÇÃO DE PERCENTUAIS ==================
   const skillCircles = document.querySelectorAll(".skill-circle");
-  
+
   skillCircles.forEach(circle => {
     const percent = circle.getAttribute("data-percent");
     const progressCircle = circle.querySelector(".progress");
@@ -35,9 +33,16 @@ document.addEventListener("DOMContentLoaded", () => {
       const offset = circumference - (currentPercent / 100) * circumference;
       progressCircle.style.strokeDashoffset = offset;
 
-      if (currentPercent >= percent) {
-        clearInterval(animation);
-      }
+      if (currentPercent >= percent) clearInterval(animation);
     }, 20);
   });
+});
+
+// ================== MENU HAMBÚRGUER ==================
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active"); // Animação do hambúrguer
+  navLinks.classList.toggle("show");   // Abre/fecha menu mobile
 });

@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /> <!-- Charset UTF-8 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsivo -->
-  <title>Skills | Bryyan.Dev</title> <!-- Título da aba -->
-  <link rel="stylesheet" href="style.css" /> <!-- CSS principal -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Pré-conexão Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" /> <!-- Fonte Orbitron -->
-  <script src="https://unpkg.com/lucide@latest"></script> <!-- Ícones Lucide -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Bryyan.Dev</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="dark-theme"> <!-- Força tema escuro -->
+<body class="dark-theme">
 
   <!-- Cabeçalho -->
   <header>
-    <nav>
-      <div class="logo"><h1>PortFolio</h1></div> <!-- Logo -->
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sobre.html">About</a></li>
-        <li><a href="habilidades.html" class="active">Skills</a></li>
-        <li><a href="projetos.html">Projects</a></li>
-        <li><a href="contato.html">Contact</a></li>
+    <nav class="navbar">
+      <div class="logo"><h1>PortFolio</h1></div>
+      <div class="menu-toggle hamburger" id="menu-toggle">
+        <div></div><div></div><div></div>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"><i data-lucide="home"></i> Home</a></li>
+        <li><a href="sobre.html"><i data-lucide="user"></i> About</a></li>
+        <li><a href="habilidades.html" class="active"><i data-lucide="code"></i> Skills</a></li>
+        <li><a href="projetos.html"><i data-lucide="folder"></i> Projects</a></li>
+        <li><a href="contato.html"><i data-lucide="mail"></i> Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Seção de habilidades -->
+  <!-- Seção Habilidades -->
   <section class="section habilidades">
-    <h2>My Skills</h2> <!-- Título da seção -->
+    <h2>My Skills</h2>
+    <p>Here are some of my main skills and proficiency levels:</p>
 
-    <!-- Grid de habilidades em círculos -->
     <div class="skills-grid">
-      <!-- Cada skill em um círculo -->
       <div class="skill-circle" data-percent="85">
         <svg>
           <circle class="bg" cx="50%" cy="50%" r="45"></circle>
@@ -42,7 +44,6 @@
           <p>JavaScript</p>
         </div>
       </div>
-
       <div class="skill-circle" data-percent="75">
         <svg>
           <circle class="bg" cx="50%" cy="50%" r="45"></circle>
@@ -53,7 +54,6 @@
           <p>React.js</p>
         </div>
       </div>
-
       <div class="skill-circle" data-percent="90">
         <svg>
           <circle class="bg" cx="50%" cy="50%" r="45"></circle>
@@ -64,7 +64,6 @@
           <p>HTML5 &amp; CSS3</p>
         </div>
       </div>
-
       <div class="skill-circle" data-percent="70">
         <svg>
           <circle class="bg" cx="50%" cy="50%" r="45"></circle>
@@ -75,7 +74,6 @@
           <p>Node.js</p>
         </div>
       </div>
-
       <div class="skill-circle" data-percent="80">
         <svg>
           <circle class="bg" cx="50%" cy="50%" r="45"></circle>
@@ -86,7 +84,6 @@
           <p>Git &amp; GitHub</p>
         </div>
       </div>
-
       <div class="skill-circle" data-percent="65">
         <svg>
           <circle class="bg" cx="50%" cy="50%" r="45"></circle>
@@ -106,11 +103,17 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="script.js"></script> <!-- JS principal -->
+  <script src="script.js"></script>
   <script>
-    lucide.createIcons(); // Renderiza ícones
+    lucide.createIcons();
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('show');
+    });
 
-    // Animação de carregamento das porcentagens
+    // Animação das porcentagens
     document.querySelectorAll('.skill-circle').forEach(circle => {
       const percent = circle.getAttribute('data-percent');
       const progressCircle = circle.querySelector('.progress');
@@ -128,9 +131,7 @@
         const offset = circumference - (currentPercent / 100) * circumference;
         progressCircle.style.strokeDashoffset = offset;
 
-        if (currentPercent >= percent) {
-          clearInterval(animation);
-        }
+        if (currentPercent >= percent) clearInterval(animation);
       }, 20);
     });
   </script>

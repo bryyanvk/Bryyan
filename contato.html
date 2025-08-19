@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /> <!-- Charset UTF-8 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsivo -->
-  <title>Contact | Bryyan.Dev</title> <!-- Título da aba -->
-  <link rel="stylesheet" href="style.css" /> <!-- CSS principal -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Pré-conexão Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" /> <!-- Fonte Orbitron -->
-  <script src="https://unpkg.com/lucide@latest"></script> <!-- Ícones Lucide -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Bryyan.Dev</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="dark-theme"> <!-- Força tema escuro -->
+<body class="dark-theme">
 
   <!-- Cabeçalho -->
   <header>
-    <nav>
-      <div class="logo"><h1>PortFolio</h1></div> <!-- Logo -->
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sobre.html">About</a></li>
-        <li><a href="habilidades.html">Skills</a></li>
-        <li><a href="projetos.html">Projects</a></li>
-        <li><a href="contato.html" class="active">Contact</a></li>
+    <nav class="navbar">
+      <div class="logo"><h1>PortFolio</h1></div>
+      <div class="menu-toggle hamburger" id="menu-toggle">
+        <div></div><div></div><div></div>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"><i data-lucide="home"></i> Home</a></li>
+        <li><a href="sobre.html"><i data-lucide="user"></i> About</a></li>
+        <li><a href="habilidades.html"><i data-lucide="code"></i> Skills</a></li>
+        <li><a href="projetos.html"><i data-lucide="folder"></i> Projects</a></li>
+        <li><a href="contato.html" class="active"><i data-lucide="mail"></i> Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Seção de contato -->
+  <!-- Seção Contato -->
   <section class="section contato">
-    <h2>Let's Talk?</h2> <!-- Título da seção -->
-    <p>If you want to chat, collaborate, or just share ideas, my contacts are below:</p> <!-- Texto introdutório -->
+    <h2>Let's Talk?</h2>
+    <p>If you want to chat, collaborate, or just share ideas, my contacts are below:</p>
 
-    <!-- Grid de contatos -->
     <div class="contact-grid">
       <div class="contact-card">
         <i data-lucide="mail"></i>
@@ -59,13 +61,11 @@
       </div>
     </div>
 
-    <!-- Botões de ação -->
     <div class="connect-buttons">
       <a href="mailto:bryyan@email.com" class="btn">Get in Touch</a>
       <a href="projetos.html" class="btn">View Projects</a>
     </div>
 
-    <!-- Estatísticas rápidas -->
     <div class="quick-stats">
       <div class="stat">
         <h3>3+</h3>
@@ -81,7 +81,6 @@
       </div>
     </div>
 
-    <!-- Chamada final -->
     <div class="cta-final">
       <h2>Ready to Collaborate?</h2>
       <p>I am always open to new challenges, ideas, and projects. Let's create something together!</p>
@@ -95,9 +94,15 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="script.js"></script> <!-- JS principal -->
+  <script src="script.js"></script>
   <script>
-    lucide.createIcons(); // Renderiza ícones Lucide
+    lucide.createIcons();
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('show');
+    });
   </script>
 </body>
 </html>

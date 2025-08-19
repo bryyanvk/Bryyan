@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /> <!-- Charset UTF-8 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsivo -->
-  <title>Projects | Bryyan.Dev</title> <!-- Título da aba -->
-  <link rel="stylesheet" href="style.css" /> <!-- CSS principal -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Pré-conexão Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" /> <!-- Fonte Orbitron -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Bryyan.Dev</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="dark-theme"> <!-- Força tema escuro -->
+<body class="dark-theme">
 
   <!-- Cabeçalho -->
   <header>
-    <nav>
-      <div class="logo"><h1>PortFolio</h1></div> <!-- Logo -->
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sobre.html">About</a></li>
-        <li><a href="habilidades.html">Skills</a></li>
-        <li><a href="projetos.html" class="active">Projects</a></li>
-        <li><a href="contato.html">Contact</a></li>
+    <nav class="navbar">
+      <div class="logo"><h1>PortFolio</h1></div>
+      <div class="menu-toggle hamburger" id="menu-toggle">
+        <div></div><div></div><div></div>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"><i data-lucide="home"></i> Home</a></li>
+        <li><a href="sobre.html"><i data-lucide="user"></i> About</a></li>
+        <li><a href="habilidades.html"><i data-lucide="code"></i> Skills</a></li>
+        <li><a href="projetos.html" class="active"><i data-lucide="folder"></i> Projects</a></li>
+        <li><a href="contato.html"><i data-lucide="mail"></i> Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Seção de projetos -->
   <section class="section projetos">
-    <h2>Featured Projects</h2> <!-- Título da seção -->
+    <h2>Featured Projects</h2>
+    <p>Here are some of my recent works with details and links.</p>
 
-    <!-- Grid de projetos -->
     <div class="projetos-grid">
-      <!-- Card do projeto 1 -->
       <article class="projeto-card">
-        <h3>Tron Interface</h3> <!-- Nome do projeto -->
-        <p>Layout inspired by Tron with animations, transitions, and neon pixel rain.</p> <!-- Descrição -->
-        <a href="#" class="btn">View More</a> <!-- Botão -->
+        <h3>Tron Interface</h3>
+        <p>Layout inspired by Tron with animations, transitions, and neon pixel rain.</p>
+        <a href="#" class="btn">View More</a>
       </article>
 
-      <!-- Card do projeto 2 -->
       <article class="projeto-card">
         <h3>Black & White Landing Page</h3>
         <p>Monochromatic aesthetics focusing on typography, contrast, and responsiveness.</p>
         <a href="#" class="btn">View More</a>
       </article>
 
-      <!-- Card do projeto 3 -->
       <article class="projeto-card">
         <h3>React Dashboard</h3>
         <p>Dynamic dashboard with React.js, filtering, and animated charts.</p>
@@ -59,6 +60,15 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="script.js"></script> <!-- JS principal -->
+  <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
