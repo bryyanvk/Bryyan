@@ -35,14 +35,14 @@ a:hover { color: #66fcf1; }
 
 /* ================== CABEÇALHO ================== */
 nav {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.8rem 1rem;
   position: relative;
   z-index: 100;
+  border-bottom: 2px solid #45a29e;
 }
 
 /* Logo */
@@ -52,9 +52,10 @@ nav {
   cursor: default;
   user-select: none;
   letter-spacing: 2px;
+  color: #f39c12; /* cor alterada */
 }
-body.dark-theme .logo h1 { color: #45a29e; }
-body.light-theme .logo h1 { color: #2c3e50; }
+body.dark-theme .logo h1 { color: #09c5c5; }
+body.light-theme .logo h1 { color: #08efff; }
 
 /* ================== LINKS DE NAVEGAÇÃO ================== */
 .nav-links {
@@ -79,14 +80,14 @@ body.light-theme .logo h1 { color: #2c3e50; }
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(69,162,158,0.3);
+  background-color: rgba(43, 185, 178, 0.712);
   transition: all 0.4s ease;
   z-index: 0;
 }
 .nav-links li a:hover::after { left: 0; }
 .nav-links li a span { position: relative; z-index: 1; }
-body.dark-theme .nav-links li a.active { background-color: #45a29e; color: #0b0c10; }
-body.light-theme .nav-links li a.active { background-color: #3498db; color: #f5f5f5; }
+body.dark-theme .nav-links li a.active { background-color: #03e4e4; color: #ffffff; }
+body.light-theme .nav-links li a.active { background-color: #0ecce6; color: #ffffff; }
 
 /* ================== MENU HAMBÚRGUER ================== */
 .hamburger {
@@ -99,7 +100,7 @@ body.light-theme .nav-links li a.active { background-color: #3498db; color: #f5f
 .hamburger div {
   width: 25px;
   height: 3px;
-  background-color: #45a29e;
+  background-color: #38a8a3;
   transition: all 0.3s ease;
 }
 body.light-theme .hamburger div { background-color: #3498db; }
@@ -188,52 +189,22 @@ body.light-theme .contact-card:hover {
   box-shadow: 0 0 20px #2980b9ee;
 }
 
-/* ================== CARDS DE CONTATO DETALHADOS ================== */
-.contact-grid {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: 2rem;
-  justify-items: center;
-  align-items: stretch;
-  width: 100%;
-  max-width: 1000px;
+/* ================== LINHA DIVISÓRIA WELCOME ================== */
+.welcome-divider {
+  width: 100vw;
+  height: 4px;
+  margin: 0.5rem 0 2rem 0;
+  background: #3498db;
+  box-shadow: 0 0 10px #3498db, 0 0 20px #3498db66, 0 0 30px #5dade2aa;
+  border-radius: 5px;
 }
-.contact-card {
-  background-color: #1c1c1c;
-  border: 2px solid #66fcf1;
-  border-radius: 15px;
-  width: 220px;
-  height: 200px;
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-body.light-theme .contact-card {
-  background-color: #ecf0f1;
-  border: 2px solid #3498db;
-  color: #2c3e50;
-}
-.contact-card i {
-  font-size: 2.2rem;
-  margin-bottom: 12px;
-  color: #66fcf1;
-}
-body.light-theme .contact-card i { color: #3498db; }
-.contact-card h3 { margin-bottom: 8px; }
-.contact-card p { font-size: 0.95rem; word-wrap: break-word; }
-.contact-card a { color: inherit; text-decoration: none; }
-.contact-card a:hover { color: #66fcf1; }
 
 /* ================== BOTÕES ================== */
-.btn, .btn-section {
+.btn, .btn-section { 
   cursor: pointer;
   font-family: Arial, sans-serif;
   display: inline-block;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .btn {
   background-color: #45a29e;
@@ -242,10 +213,7 @@ body.light-theme .contact-card i { color: #3498db; }
   border-radius: 8px;
   font-weight: 700;
 }
-.btn:hover {
-  background-color: #66fcf1;
-  color: #1f2833;
-}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 0 10px #66fcf1aa; }
 .btn-section {
   background-color: #45a29e;
   color: #0b0c10;
@@ -254,15 +222,13 @@ body.light-theme .contact-card i { color: #3498db; }
   font-weight: 700;
   text-align: center;
   font-size: 1.1rem;
-  box-shadow: 0 0 15px #45a29ecc, 0 0 30px #66fcf188;
+  box-shadow: 0 0 15px #000000cc, 0 0 30px #66fcf188;
   transition: all 0.4s ease;
   text-decoration: none;
 }
 .btn-section:hover {
-  background-color: #66fcf1;
-  color: #0b0c10;
   transform: translateY(-4px);
-  box-shadow: 0 0 25px #66fcf1cc, 0 0 50px #66fcf1aa, 0 0 100px #66fcf188;
+  box-shadow: 0 0 15px #66fcf1cc, 0 0 25px #66fcf1aa, 0 0 50px #66fcf188; /* sombra diminuída */
 }
 
 /* ================== FOTO DE PERFIL ================== */
@@ -272,6 +238,7 @@ body.light-theme .contact-card i { color: #3498db; }
   align-items: center;
   margin: 2.5rem auto;
   text-align: center;
+  flex-direction: column;
 }
 .foto-container .user-foto {
   width: clamp(150px, 20vw, 240px);
@@ -287,6 +254,24 @@ body.light-theme .contact-card i { color: #3498db; }
   box-shadow: 0 0 35px rgba(0, 255, 221, 0.8), 0 0 80px rgba(7, 208, 243, 0.6), 0 0 120px rgba(0,183,255,0.4);
 }
 
+/* Nome acima da foto */
+.foto-container .user-nome {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #13e2c7; /* nova cor */
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Texto abaixo da foto */
+.foto-container .user-cargo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f1c40f; /* nova cor */
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
 /* ================== HOVER E ANIMAÇÕES ================== */
 @keyframes slideUp {
   0% { opacity: 0; transform: translateY(40px); }
@@ -299,7 +284,7 @@ body.light-theme .contact-card i { color: #3498db; }
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(69,162,158,0.3);
+  background-color: rgba(0, 255, 242, 0.3);
   transition: all 0.4s ease;
   z-index: 0;
 }
@@ -383,74 +368,49 @@ body.light-theme .contact-button-card {
   margin-top: 30px;
   flex-wrap: wrap;
 }
+.botoes-navegacao .btn-section {
+  box-shadow: 0 0 8px #45a29ecc, 0 0 15px #7bc5c088; /* sombra diminuída */
+}
+.botoes-navegacao .btn-section:hover {
+  transform: translateY(-2px); /* hover menor */
+  box-shadow: 0 0 12px #66fcf1cc, 0 0 20px #66fcf1aa;
+}
 
 /* ================== RESPONSIVIDADE PARA CELULAR ================== */
 @media (max-width: 768px) {
-  /* Ajuste geral da seção de contato */
   .section.contact {
     padding: 1rem;
     margin: 2rem auto;
   }
-
-  .section.contact h2 {
-    font-size: 2rem;
-  }
-
-  .section.contact p {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  /* Cards de contato */
+  .section.contact h2 { font-size: 2rem; }
+  .section.contact p { font-size: 1rem; padding: 0 10px; }
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 15px;
     justify-items: center;
   }
-
   .contact-card {
     width: 100%;
     max-width: 320px;
     height: auto;
     padding: 15px;
   }
-
-  /* Botões de contato */
   .contact-buttons-grid {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-
   .contact-button-card {
     padding: 20px;
     width: 100%;
     max-width: 350px;
   }
-
-  .contact-button-card h3 {
-    font-size: 1.1rem;
-  }
-
-  .contact-button-card p {
-    font-size: 0.9rem;
-  }
-
-  .contact-button-card .btn {
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Quick stats */
-  .quick-stats {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 12px;
-  }
-
-  .stat h3 {
-    font-size: 1.5rem;
-  }
+  .contact-button-card h3 { font-size: 1.1rem; }
+  .contact-button-card p { font-size: 0.9rem; }
+  .contact-button-card .btn { margin-top: 10px; width: 100%; text-align: center; }
+  .quick-stats { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+  .stat h3 { font-size: 1.5rem; }
 }
+
 /* ================== SEÇÃO DE CONTATO EM DUAS COLUNAS ================== */
 .contact-sections.two-columns {
   display: grid;
@@ -459,10 +419,101 @@ body.light-theme .contact-button-card {
   align-items: start;
   margin-top: 2.5rem;
 }
-
-/* Responsividade - volta para coluna única no mobile */
 @media (max-width: 900px) {
-  .contact-sections.two-columns {
-    grid-template-columns: 1fr;
-  }
+  .contact-sections.two-columns { grid-template-columns: 1fr; }
+}
+/* Nome acima da foto */
+.foto-container .user-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #15cdd3 !important; /* azul-turquesa */
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Texto abaixo da foto */
+.foto-container .user-role {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #66fcf1 !important; /* amarelo */
+  text-align: center;
+  margin-top: 0.5rem;
+}
+/* ================== BOTÕES DE TEMA ================== */
+.theme-btn {
+  background: transparent;
+  border: 2px solid rgb(0, 248, 227); /* Borda azul */
+  border-radius: 5px; /* Borda arredondada (opcional) */
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.3s ease; /* Adicionando transição para a borda */
+  margin-left: 8px;
+}
+
+.theme-btn:hover {
+  transform: scale(1.1); /* Efeito de zoom */
+  border-color: #0077ff; /* Mudança de cor na borda ao passar o mouse */
+}
+/* ...existing code... */
+
+/* Não aplica hover no link ativo do menu */
+.nav-links li a.active:hover::after {
+  left: -100%; /* Mantém o pseudo-elemento fora da tela */
+}
+/* Mantém o texto branco no hover dos links do menu, inclusive o ativo */
+.nav-links li a:hover,
+.nav-links li a:focus,
+.nav-links li a.active,
+.nav-links li a.active:hover {
+  color: #fff !important;
+}
+
+/* Garante que o texto dentro do span também fique branco */
+.nav-links li a:hover span,
+.nav-links li a:focus span,
+.nav-links li a.active span,
+.nav-links li a.active:hover span {
+  color: #fff !important;
+}
+/* ================== AJUSTES FINAIS DE TEMA ================== */
+body.dark-theme {
+  background-color: #0b0c10;
+  color: #c5c6c7;
+}
+body.light-theme {
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+/* Menu ativo */
+body.dark-theme .nav-links li a.active {
+  background-color: #03e4e4;
+  color: #ffffff;
+}
+body.light-theme .nav-links li a.active {
+  background-color: #0ecce6;
+  color: #ffffff;
+}
+
+/* Hamburger */
+body.dark-theme .hamburger div { background-color: #38a8a3; }
+body.light-theme .hamburger div { background-color: #3498db; }
+
+/* Seções */
+body.dark-theme .section h2 { color: #66fcf1; text-shadow: 0 0 10px #45a29e; }
+body.light-theme .section h2 { color: #3498db; text-shadow: none; }
+body.dark-theme .section p { color: #c5c6c7; }
+body.light-theme .section p { color: #222; }
+
+/* Cards e botões */
+body.dark-theme .skill, body.dark-theme .projeto-card, body.dark-theme .contact-card {
+  background-color: #1c1c1c;
+  color: #c5c6c7;
+}
+body.light-theme .skill, body.light-theme .projeto-card, body.light-theme .contact-card {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+.glow-pulse {
+  transition: color 1.2s ease-in-out;
 }

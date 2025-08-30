@@ -9,13 +9,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="dark-theme">
+<body>
 
-  <!-- Cabeçalho -->
+  <!-- Header -->
   <header>
     <nav class="navbar">
       <div class="logo">
-        <h1>PortFolio</h1>
+        <h1>Portfolio</h1>
+      </div>
+
+      <!-- Navegação -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active"><i data-lucide="home"></i> Home</a></li>
+        <li><a href="sobre.html"><i data-lucide="user"></i> About</a></li>
+        <li><a href="habilidades.html"><i data-lucide="code"></i> Skills</a></li>
+        <li><a href="projetos.html"><i data-lucide="folder"></i> Projects</a></li>
+        <li><a href="contato.html"><i data-lucide="mail"></i> Contact</a></li>
+      </ul>
+
+      <!-- Botão alternador de tema -->
+      <div class="theme-container">
+        <button id="theme-light" class="theme-btn">☀️</button>
+        <button id="theme-dark" class="theme-btn">🌙</button>
+        <button id="theme-auto" class="theme-btn">🌓</button>
       </div>
 
       <!-- Botão hambúrguer (mobile) -->
@@ -24,19 +40,10 @@
         <div></div>
         <div></div>
       </div>
-
-      <!-- Links -->
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="active"><i data-lucide="home"></i> Home</a></li>
-        <li><a href="sobre.html"><i data-lucide="user"></i> About</a></li>
-        <li><a href="habilidades.html"><i data-lucide="code"></i> Skills</a></li>
-        <li><a href="projetos.html"><i data-lucide="folder"></i> Projects</a></li>
-        <li><a href="contato.html"><i data-lucide="mail"></i> Contact</a></li>
-      </ul>
     </nav>
   </header>
 
-  <!-- Seção inicial -->
+  <!-- Hero / Intro -->
   <section class="section inicio">
     <div class="intro">
       <h2><i data-lucide="home"></i> Welcome to my Portfolio</h2>
@@ -46,7 +53,9 @@
     </div>
 
     <div class="foto-container">
-      <img src="euu.jpg" alt="My Photo" class="user-foto" />
+      <h3 class="user-name">Bryyan Leandro Rosa</h3>
+      <img src="euu.jpg" alt="Photo of Bryyan" class="user-foto" />
+      <p class="user-role">Estudante de TI</p>
     </div>
 
     <div class="botoes-navegacao">
@@ -54,28 +63,9 @@
       <a href="projetos.html" class="btn-section">Projects</a>
       <a href="contato.html" class="btn-section">Contact</a>
     </div>
-
-    <div class="github-acesso">
-      <a href="https://github.com/seuusuario/seusite" target="_blank" class="btn-github">
-        <i data-lucide="github"></i> View code on GitHub
-      </a>
-    </div>
   </section>
-
- 
 
   <!-- Scripts -->
   <script src="script.js"></script>
-  <script>
-    lucide.createIcons();
-
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navLinks.classList.toggle('show');
-    });
-  </script>
 </body>
 </html>

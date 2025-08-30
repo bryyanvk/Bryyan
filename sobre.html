@@ -8,35 +8,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    /* Responsividade do mapa */
-    .map-container {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      margin: 20px auto;
-      border-radius: 12px;
-      overflow: hidden;
-      aspect-ratio: 16 / 9; /* mantém proporção no celular */
-      box-shadow: 0 0 20px #45a29e;
-    }
-
-    .map-container iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-  </style>
 </head>
 <body class="dark-theme">
 
-  <!-- Cabeçalho -->
+  <!-- Header -->
   <header>
     <nav class="navbar">
-      <div class="logo"><h1>PortFolio</h1></div>
+      <div class="logo"><h1>Portfolio</h1></div>
+
+      <!-- Botão hamburguer -->
       <div class="menu-toggle hamburger" id="menu-toggle">
         <div></div><div></div><div></div>
       </div>
+
+      <!-- Links do menu -->
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html"><i data-lucide="home"></i> Home</a></li>
         <li><a href="sobre.html" class="active"><i data-lucide="user"></i> About</a></li>
@@ -44,37 +29,36 @@
         <li><a href="projetos.html"><i data-lucide="folder"></i> Projects</a></li>
         <li><a href="contato.html"><i data-lucide="mail"></i> Contact</a></li>
       </ul>
+
+      <!-- Botão de alternar tema igual ao index -->
+      <button id="theme-toggle" class="theme-btn" title="Toggle Theme">🌙</button>
     </nav>
   </header>
 
-  <!-- Seção sobre com mapa -->
+  <!-- About Section -->
   <section class="section sobre">
-    <h2>Where I Am</h2>
-    <p>Here’s my location on the map so you can find me more easily.</p>
+    <h2 class="section-title"><i data-lucide="map-pin"></i> About me</h2>
+    <p class="section-subtitle">
+      I am currently a computer technician student, my goal is to study software engineering and become a game developer.
+      Lately I've been delving deeper into the languages: Python, C++, HTML, CSS, and JavaScript.
+    </p>
+    <p>Always looking for challenges to be able to evolve further.</p>
+    <p>Born in Santa Rita do Sapucaí, a 16-year-old programming nut.</p>
 
     <div class="map-container">
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14770.861092836802!2d-45.71276653408948!3d-22.250879325552248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cba24de6768243%3A0xbab272348222b906!2sSanta%20Rita%20do%20Sapuca%C3%AD%2C%20MG%2C%2037540-000!5e0!3m2!1spt-BR!2sbr!4v1755875562396!5m2!1spt-BR!2sbr"
-      width="600"
-      height="450"
-      style="border:0;"
-      allowfullscreen="" 
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14770.861092836802!2d-45.71276653408948!3d-22.250879325552248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cba24de6768243%3A0xbab272348222b906!2sSanta%20Rita%20do%20Sapuca%C3%AD%2C%20MG%2C%2037540-000!5e0!3m2!1spt-BR!2sbr!4v1755875562396!5m2!1spt-BR!2sbr"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen="" 
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </section>
 
- 
-
   <!-- Scripts -->
   <script src="script.js"></script>
-  <script>
-    lucide.createIcons();
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navLinks.classList.toggle('show');
-    });
-  </script>
 </body>
 </html>

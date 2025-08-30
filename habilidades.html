@@ -11,10 +11,11 @@
 </head>
 <body class="dark-theme">
 
-  <!-- Cabeçalho -->
+  <!-- Header -->
   <header>
     <nav class="navbar">
-      <div class="logo"><h1>PortFolio</h1></div>
+      <div class="logo"><h1>Portfolio</h1></div>
+      <button id="theme-toggle" class="theme-btn">🌙</button>
       <div class="menu-toggle hamburger" id="menu-toggle">
         <div></div><div></div><div></div>
       </div>
@@ -28,10 +29,10 @@
     </nav>
   </header>
 
-  <!-- Seção Habilidades -->
+  <!-- Skills Section -->
   <section class="section habilidades">
-    <h2>My Skills</h2>
-    <p>Here are some of my main skills and proficiency levels:</p>
+    <h2 class="section-title"><i data-lucide="code"></i> My Skills</h2>
+    <p class="section-subtitle">Here are some of my main skills and proficiency levels:</p>
 
     <div class="skills-grid">
       <div class="skill-circle" data-percent="85">
@@ -95,42 +96,49 @@
         </div>
       </div>
     </div>
+
+    <!-- Próximos objetivos -->
+    <div class="next-goals">
+      <h3>Próximos objetivos</h3>
+      <p>Estou sempre buscando melhorar minhas habilidades e alcançar novos desafios. Alguns objetivos que quero atingir:</p>
+      <div class="goal-cards">
+        <div class="goal-card">Aprender Unity</div>
+        <div class="goal-card">Inteligência Artificial aplicada a jogos</div>
+        <div class="goal-card">Aprofundar Machine Learning</div>
+      </div>
+    </div>
+
+    <!-- Aprendendo agora -->
+    <div class="learning-now">
+      <h3>Aprendendo agora</h3>
+      <div class="learning-buttons">
+        <button>Controle PID</button>
+        <button>Machine Learning</button>
+        <button>IA aplicada a jogos</button>
+      </div>
+    </div>
+
+    <!-- Ferramentas que uso -->
+    <div class="tools">
+      <h3>Ferramentas que uso</h3>
+      <div class="tools-buttons">
+        <button>HTML</button>
+        <button>CSS</button>
+        <button>JavaScript</button>
+        <button>GitHub</button>
+        <button>Canva</button>
+        <button>VSCode</button>
+        <button>Excel</button>
+      </div>
+    </div>
   </section>
 
-  
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Bryyan.Dev | Made with 💻 & ☕</p>
+  </footer>
 
   <!-- Scripts -->
   <script src="script.js"></script>
-  <script>
-    lucide.createIcons();
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navLinks.classList.toggle('show');
-    });
-
-    // Animação das porcentagens
-    document.querySelectorAll('.skill-circle').forEach(circle => {
-      const percent = circle.getAttribute('data-percent');
-      const progressCircle = circle.querySelector('.progress');
-      const percentText = circle.querySelector('.percent');
-      const radius = progressCircle.r.baseVal.value;
-      const circumference = 2 * Math.PI * radius;
-
-      progressCircle.style.strokeDasharray = circumference;
-      progressCircle.style.strokeDashoffset = circumference;
-
-      let currentPercent = 0;
-      const animation = setInterval(() => {
-        currentPercent++;
-        percentText.textContent = `${currentPercent}%`;
-        const offset = circumference - (currentPercent / 100) * circumference;
-        progressCircle.style.strokeDashoffset = offset;
-
-        if (currentPercent >= percent) clearInterval(animation);
-      }, 20);
-    });
-  </script>
 </body>
 </html>
