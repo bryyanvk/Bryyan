@@ -148,5 +148,10 @@ document.addEventListener("DOMContentLoaded", () => {
       menuToggle.classList.remove("active");
     });
   });
+  document.querySelectorAll(".habilidades button")
+  .forEach(el => {
+    el.addEventListener("mouseenter", () => el.classList.add("hover-loading"));
+    el.addEventListener("mouseleave", () => el.classList.remove("hover-loading"));
+  });
 
 });

@@ -14,11 +14,9 @@
   <!-- Header -->
   <header>
     <nav class="navbar">
-      <div class="logo"><h1>Portfolio</h1></div>
-      <button id="theme-toggle" class="theme-btn">🌙</button>
-      <div class="menu-toggle hamburger" id="menu-toggle">
-        <div></div><div></div><div></div>
-      </div>
+      <div class="logo"><h1 class="pulse">Portfolio</h1></div>
+
+      <!-- Links centralizados -->
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html"><i data-lucide="home"></i> Home</a></li>
         <li><a href="sobre.html"><i data-lucide="user"></i> About</a></li>
@@ -26,117 +24,122 @@
         <li><a href="projetos.html"><i data-lucide="folder"></i> Projects</a></li>
         <li><a href="contato.html"><i data-lucide="mail"></i> Contact</a></li>
       </ul>
+
+      <!-- Alternador de tema -->
+      <div class="theme-container">
+        <button id="theme-light" class="theme-btn">☀️</button>
+        <button id="theme-dark" class="theme-btn">🌙</button>
+        <button id="theme-auto" class="theme-btn">🌓</button>
+      </div>
+
+      <!-- Hamburger mobile -->
+      <div class="hamburger" id="menu-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </nav>
   </header>
 
   <!-- Skills Section -->
-  <section class="section habilidades">
-    <h2 class="section-title"><i data-lucide="code"></i> My Skills</h2>
-    <p class="section-subtitle">Here are some of my main skills and proficiency levels:</p>
+  <main>
+    <section class="section habilidades">
+      <h2 class="section-title pulse"><i data-lucide="code"></i> My Skills</h2>
+      <p class="section-subtitle">Here are some of my main skills and proficiency levels:</p>
 
-    <div class="skills-grid">
-      <div class="skill-circle" data-percent="85">
-        <svg>
-          <circle class="bg" cx="50%" cy="50%" r="45"></circle>
-          <circle class="progress" cx="50%" cy="50%" r="45"></circle>
-        </svg>
-        <div class="skill-info">
-          <span class="percent">0%</span>
-          <p>JavaScript</p>
+      <div class="skills-grid">
+        <div class="skill-circle" data-percent="85">
+          <svg>
+            <circle class="bg" cx="50%" cy="50%" r="45"></circle>
+            <circle class="progress" cx="50%" cy="50%" r="45"></circle>
+          </svg>
+          <div class="skill-info">
+            <span class="percent">0%</span>
+            <p>JavaScript</p>
+          </div>
         </div>
-      </div>
-      <div class="skill-circle" data-percent="75">
-        <svg>
-          <circle class="bg" cx="50%" cy="50%" r="45"></circle>
-          <circle class="progress" cx="50%" cy="50%" r="45"></circle>
-        </svg>
-        <div class="skill-info">
-          <span class="percent">0%</span>
-          <p>React.js</p>
-        </div>
-      </div>
-      <div class="skill-circle" data-percent="90">
-        <svg>
-          <circle class="bg" cx="50%" cy="50%" r="45"></circle>
-          <circle class="progress" cx="50%" cy="50%" r="45"></circle>
-        </svg>
-        <div class="skill-info">
-          <span class="percent">0%</span>
-          <p>HTML5 &amp; CSS3</p>
-        </div>
-      </div>
-      <div class="skill-circle" data-percent="70">
-        <svg>
-          <circle class="bg" cx="50%" cy="50%" r="45"></circle>
-          <circle class="progress" cx="50%" cy="50%" r="45"></circle>
-        </svg>
-        <div class="skill-info">
-          <span class="percent">0%</span>
-          <p>Node.js</p>
-        </div>
-      </div>
-      <div class="skill-circle" data-percent="80">
-        <svg>
-          <circle class="bg" cx="50%" cy="50%" r="45"></circle>
-          <circle class="progress" cx="50%" cy="50%" r="45"></circle>
-        </svg>
-        <div class="skill-info">
-          <span class="percent">0%</span>
-          <p>Git &amp; GitHub</p>
-        </div>
-      </div>
-      <div class="skill-circle" data-percent="65">
-        <svg>
-          <circle class="bg" cx="50%" cy="50%" r="45"></circle>
-          <circle class="progress" cx="50%" cy="50%" r="45"></circle>
-        </svg>
-        <div class="skill-info">
-          <span class="percent">0%</span>
-          <p>UI/UX Design</p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Próximos objetivos -->
-    <div class="next-goals">
-      <h3>Próximos objetivos</h3>
-      <p>Estou sempre buscando melhorar minhas habilidades e alcançar novos desafios. Alguns objetivos que quero atingir:</p>
-      <div class="goal-cards">
-        <div class="goal-card">Aprender Unity</div>
-        <div class="goal-card">Inteligência Artificial aplicada a jogos</div>
-        <div class="goal-card">Aprofundar Machine Learning</div>
-      </div>
-    </div>
+        <div class="skill-circle" data-percent="75">
+          <svg>
+            <circle class="bg" cx="50%" cy="50%" r="45"></circle>
+            <circle class="progress" cx="50%" cy="50%" r="45"></circle>
+          </svg>
+          <div class="skill-info">
+            <span class="percent">0%</span>
+            <p>React.js</p>
+          </div>
+        </div>
 
-    <!-- Aprendendo agora -->
-    <div class="learning-now">
-      <h3>Aprendendo agora</h3>
-      <div class="learning-buttons">
-        <button>Controle PID</button>
-        <button>Machine Learning</button>
-        <button>IA aplicada a jogos</button>
-      </div>
-    </div>
+        <div class="skill-circle" data-percent="90">
+          <svg>
+            <circle class="bg" cx="50%" cy="50%" r="45"></circle>
+            <circle class="progress" cx="50%" cy="50%" r="45"></circle>
+          </svg>
+          <div class="skill-info">
+            <span class="percent">0%</span>
+            <p>HTML5 &amp; CSS3</p>
+          </div>
+        </div>
 
-    <!-- Ferramentas que uso -->
-    <div class="tools">
-      <h3>Ferramentas que uso</h3>
-      <div class="tools-buttons">
-        <button>HTML</button>
-        <button>CSS</button>
-        <button>JavaScript</button>
-        <button>GitHub</button>
-        <button>Canva</button>
-        <button>VSCode</button>
-        <button>Excel</button>
-      </div>
-    </div>
-  </section>
+        <div class="skill-circle" data-percent="70">
+          <svg>
+            <circle class="bg" cx="50%" cy="50%" r="45"></circle>
+            <circle class="progress" cx="50%" cy="50%" r="45"></circle>
+          </svg>
+          <div class="skill-info">
+            <span class="percent">0%</span>
+            <p>Node.js</p>
+          </div>
+        </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Bryyan.Dev | Made with 💻 & ☕</p>
-  </footer>
+        <div class="skill-circle" data-percent="80">
+          <svg>
+            <circle class="bg" cx="50%" cy="50%" r="45"></circle>
+            <circle class="progress" cx="50%" cy="50%" r="45"></circle>
+          </svg>
+          <div class="skill-info">
+            <span class="percent">0%</span>
+            <p>Git &amp; GitHub</p>
+          </div>
+        </div>
+
+        <div class="skill-circle" data-percent="65">
+          <svg>
+            <circle class="bg" cx="50%" cy="50%" r="45"></circle>
+            <circle class="progress" cx="50%" cy="50%" r="45"></circle>
+          </svg>
+          <div class="skill-info">
+            <span class="percent">0%</span>
+            <p>UI/UX Design</p>
+          </div>
+        </div>
+      </div>
+      <!-- Ferramentas que uso -->
+      <div class="tools">
+        <h3>Ferramentas que uso</h3>
+        <div class="tools-buttons">
+          <button>HTML</button>
+          <button>CSS</button>
+          <button>JavaScript</button>
+          <button>GitHub</button>
+          <button>Canva</button>
+          <button>VSCode</button>
+          <button>Excel</button>
+        </div>
+      </div>
+
+       <!-- Aprendendo agora -->
+      <div class="learning-now">
+        <h3>Aprendendo agora</h3>
+        <div class="learning-buttons">
+          <button>Controle PID</button>
+          <button>Machine Learning</button>
+          <button>IA aplicada a jogos</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  
 
   <!-- Scripts -->
   <script src="script.js"></script>

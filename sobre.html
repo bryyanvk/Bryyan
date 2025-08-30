@@ -11,17 +11,15 @@
 </head>
 <body class="dark-theme">
 
-  <!-- Header -->
+  <!-- Header igual ao index -->
   <header>
     <nav class="navbar">
-      <div class="logo"><h1>Portfolio</h1></div>
-
-      <!-- Botão hamburguer -->
-      <div class="menu-toggle hamburger" id="menu-toggle">
-        <div></div><div></div><div></div>
+      <!-- Logo à esquerda -->
+      <div class="logo">
+        <h1 class="pulse">Portfolio</h1>
       </div>
 
-      <!-- Links do menu -->
+      <!-- Links centralizados -->
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html"><i data-lucide="home"></i> Home</a></li>
         <li><a href="sobre.html" class="active"><i data-lucide="user"></i> About</a></li>
@@ -30,35 +28,52 @@
         <li><a href="contato.html"><i data-lucide="mail"></i> Contact</a></li>
       </ul>
 
-      <!-- Botão de alternar tema igual ao index -->
-      <button id="theme-toggle" class="theme-btn" title="Toggle Theme">🌙</button>
+      <!-- Alternador de tema à direita -->
+      <div class="theme-container">
+        <button id="theme-light" class="theme-btn">☀️</button>
+        <button id="theme-dark" class="theme-btn">🌙</button>
+        <button id="theme-auto" class="theme-btn">🌓</button>
+      </div>
+
+      <!-- Hamburger mobile -->
+      <div class="hamburger" id="menu-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </nav>
   </header>
 
   <!-- About Section -->
-  <section class="section sobre">
-    <h2 class="section-title"><i data-lucide="map-pin"></i> About me</h2>
-    <p class="section-subtitle">
-      I am currently a computer technician student, my goal is to study software engineering and become a game developer.
-      Lately I've been delving deeper into the languages: Python, C++, HTML, CSS, and JavaScript.
-    </p>
-    <p>Always looking for challenges to be able to evolve further.</p>
-    <p>Born in Santa Rita do Sapucaí, a 16-year-old programming nut.</p>
+  <main>
+    <section class="section sobre">
+      <h2 class="section-title pulse"><i data-lucide="map-pin"></i> About me</h2>
 
-    <div class="map-container">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14770.861092836802!2d-45.71276653408948!3d-22.250879325552248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cba24de6768243%3A0xbab272348222b906!2sSanta%20Rita%20do%20Sapuca%C3%AD%2C%20MG%2C%2037540-000!5e0!3m2!1spt-BR!2sbr!4v1755875562396!5m2!1spt-BR!2sbr"
-        width="600"
-        height="450"
-        style="border:0;"
-        allowfullscreen="" 
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </section>
+      <p class="primary-text">
+        I am currently a computer technician student, my goal is to study software engineering and become a game developer.
+        Lately I've been delving deeper into the languages: Python, C++, HTML, CSS, and JavaScript.
+      </p>
 
-  <!-- Scripts -->
+      <p class="secondary-text">Always looking for challenges to be able to evolve further.</p>
+      <p class="secondary-text">Born in Santa Rita do Sapucaí, a 16-year-old programming nut.</p>
+
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14770.861092836802!2d-45.71276653408948!3d-22.250879325552248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cba24de6768243%3A0xbab272348222b906!2sSanta%20Rita%20do%20Sapuca%C3%AD%2C%20MG%2C%2037540-000!5e0!3m2!1spt-BR!2sbr!4v1755875562396!5m2!1spt-BR!2sbr"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen="" 
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <p class="project-available pulse"><i data-lucide="luggage"></i> Available for projects</p>
+    </section>
+  </main>
+
+  <!-- Script único -->
   <script src="script.js"></script>
 </body>
 </html>

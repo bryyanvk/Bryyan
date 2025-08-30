@@ -517,3 +517,328 @@ body.light-theme .skill, body.light-theme .projeto-card, body.light-theme .conta
 .glow-pulse {
   transition: color 1.2s ease-in-out;
 }
+/* ================== HEADER / NAVBAR ================== */
+header {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;       /* centraliza verticalmente */
+  justify-content: space-between;
+  padding: 15px 30px;       /* igual ou maior que o Index */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex: 1;
+}
+
+
+.nav-links li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.logo h1 {
+  margin: 0;
+}
+
+.theme-toggle-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.theme-icon {
+  display: none;
+  font-size: 1.2rem;
+}
+
+.theme-icon.active {
+  display: inline;
+}
+
+/* ================== PULSANDO / SEM SOMBRA ================== */
+.pulse {
+  animation: pulse-color 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-color {
+  0% {
+    color: #00f0ff; /* azul neon */
+    opacity: 0.7;
+  }
+  50% {
+    color: #00f0ff;
+    opacity: 1;
+  }
+  100% {
+    color: #00f0ff;
+    opacity: 0.7;
+  }
+}
+
+/* Aplicar pulsar no logo */
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00f0ff;
+  animation: pulse-color 2s ease-in-out infinite alternate;
+}
+/* Parágrafo principal branco */
+.sobre p.primary-text {
+  color: #fff !important;
+}
+
+/* Parágrafos secundários mais cinza */
+.sobre p.secondary-text {
+  color: #777 !important;
+  font-style: italic; /* opcional */
+}
+.map-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente, se houver mais de um elemento */
+}
+
+.map-container iframe {
+  width: 100%;           /* ocupa 100% da largura do container */
+  max-width: 600px;      /* não fica maior que 600px */
+  height: 450px;
+  border: none;
+  border-radius: 15px;
+}
+/* ================== SEÇÃO SKILLS ================== */
+.habilidades {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.habilidades .section-title.pulse,
+.logo h1.pulse {
+  font-size: 2.5rem;
+  color: #00f0ff;
+  display: inline-block;
+  animation: pulse-color 2s ease-in-out infinite alternate;
+}
+
+.habilidades .section-subtitle {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+/* ================== GRID DE SKILLS ================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  margin-bottom: 60px;
+}
+
+.skill-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.skill-circle svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.skill-circle circle {
+  fill: none;
+  stroke-width: 10;
+  cx: 50%;
+  cy: 50%;
+  r: 45;
+}
+
+.skill-circle circle.bg {
+  stroke: #222;
+}
+
+.skill-circle circle.progress {
+  stroke: #00f0ff;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transition: stroke-dashoffset 1.5s ease-out;
+}
+
+.skill-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.skill-info .percent {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* ================== CARDS DE OBJETIVOS ================== */
+.next-goals, .learning-now, .tools {
+  margin-top: 50px;
+}
+
+.next-goals h3,
+.learning-now h3,
+.tools h3 {
+  font-size: 1.8rem;
+  color: #00f0ff;
+  margin-bottom: 15px;
+  animation: pulse-color 2s ease-in-out infinite alternate;
+}
+
+.goal-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.goal-card {
+  background-color: #111;
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.goal-card:hover {
+  transform: scale(1.05);
+}
+
+/* ================== BOTÕES ================== */
+.learning-buttons,
+.tools-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.learning-buttons button,
+.tools-buttons button {
+  background-color: #111;
+  color: #00f0ff;
+  border: 2px solid #00f0ff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover **apenas nos botões**, nada no body */
+.learning-buttons button:hover,
+.tools-buttons button:hover {
+  background-color: #00f0ff !important;
+  color: #111 !important;
+}
+
+/* ================== PULSO ================== */
+@keyframes pulse-color {
+  0% { color: #00f0ff; opacity: 0.7; }
+  50% { color: #00f0ff; opacity: 1; }
+  100% { color: #00f0ff; opacity: 0.7; }
+}
+
+/* ================== RESPONSIVIDADE ================== */
+@media (max-width: 768px) {
+  .skills-grid {
+    gap: 20px;
+  }
+  .skill-circle {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    gap: 15px;
+  }
+  .skill-circle {
+    width: 90px;
+    height: 90px;
+  }
+}
+.habilidades button.hover-loading {
+  background-color: #00f0ff !important;
+  color: #111 !important;
+}
+/* Ajuste na animação de hover nos botões */
+.hover-loading {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hover-loading::after {
+  content: '';
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 242, 0.3); /* Efeito mais suave */
+  transition: all 0.4s ease; /* Transição suave */
+  z-index: 0;
+}
+
+.hover-loading:hover::after {
+  left: 0;
+}
+
+/* Melhorar o hover no botão, sem exagerar */
+.learning-buttons button:hover,
+.tools-buttons button:hover {
+  background-color: #00f0ff !important;
+  color: #111 !important;
+  transform: scale(1.05); /* Efeito mais suave */
+  box-shadow: 0 0 10px #00f0ff; /* Sombra mais suave */
+}
+/* Melhorar o hover do botão */
+.btn, .btn-section {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover { 
+  transform: translateY(-2px); 
+  box-shadow: 0 0 10px #66fcf1aa; 
+}
+
+.btn-section:hover {
+  transform: translateY(-4px); /* Hover mais suave */
+  box-shadow: 0 0 15px #66fcf1cc, 0 0 25px #66fcf1aa; /* Efeito de sombra mais sutil */
+}
+header {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;       /* centraliza verticalmente */
+  justify-content: space-between;
+  padding: 15px 30px;       /* igual ou maior que o Index */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex: 1;
+}

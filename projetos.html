@@ -7,29 +7,16 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
-
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Font Awesome (CDN oficial) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="dark-theme">
 
   <!-- Header -->
   <header>
     <nav class="navbar">
-      <div class="logo"><h1>Portfolio</h1></div>
+      <div class="logo"><h1 class="pulse">Portfolio</h1></div>
 
-      <!-- Botão de tema -->
-      <button id="theme-toggle" class="theme-btn">🌙</button>
-
-      <!-- Menu hamburguer -->
-      <div class="menu-toggle hamburger" id="menu-toggle">
-        <div></div><div></div><div></div>
-      </div>
-
-      <!-- Links do menu -->
+      <!-- Links centralizados -->
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html"><i data-lucide="home"></i> Home</a></li>
         <li><a href="sobre.html"><i data-lucide="user"></i> About</a></li>
@@ -37,129 +24,143 @@
         <li><a href="projetos.html" class="active"><i data-lucide="folder"></i> Projects</a></li>
         <li><a href="contato.html"><i data-lucide="mail"></i> Contact</a></li>
       </ul>
+
+      <!-- Alternador de tema -->
+      <div class="theme-container">
+        <button id="theme-light" class="theme-btn">☀️</button>
+        <button id="theme-dark" class="theme-btn">🌙</button>
+        <button id="theme-auto" class="theme-btn">🌓</button>
+      </div>
+
+      <!-- Hamburger mobile -->
+      <div class="hamburger" id="menu-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </nav>
   </header>
 
   <!-- Projects Section -->
-  <section class="section projetos">
-    <h2 class="section-title"><i data-lucide="folder"></i> Featured Projects</h2>
-    <p class="section-subtitle">
-      Here are some of my main projects, showing my skills and growth in programming and robotics.
-    </p>
+  <main>
+    <section class="section projetos">
+      <h2 class="section-title pulse"><i data-lucide="folder"></i> Featured Projects</h2>
+      <p class="section-subtitle">
+        Here are some of my main projects, showing my skills and growth in programming and robotics.
+      </p>
 
-    <div class="projetos-grid">
+      <div class="projetos-grid">
 
-      <!-- Projeto 1 -->
-      <article class="projeto-card">
-        <img src="images/bebedouro-inteligente.png" alt="Bebedouro Inteligente">
-        <div class="projeto-content">
-          <p>Guia completo de estudos com ferramentas integradas como Forest App, Calendário, Notion, Google Keep e Quizlet. Interface moderna e intuitiva para organizar sua vida acadêmica.</p>
-          <div class="tech-tags">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>LocalStorage</span>
+        <!-- Projeto 1 -->
+        <article class="projeto-card">
+          <img src="images/bebedouro-inteligente.png" alt="Bebedouro Inteligente">
+          <div class="projeto-content">
+            <p>Guia completo de estudos com ferramentas integradas como Forest App, Calendário, Notion, Google Keep e Quizlet. Interface moderna e intuitiva para organizar sua vida acadêmica.</p>
+            <div class="tech-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>LocalStorage</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://github.com/seuusuario/bebedouro" target="_blank" class="btn-code">Código</a>
+              <a href="https://seusite.com/bebedouro" target="_blank" class="btn-live">Demo</a>
+            </div>
           </div>
-          <div class="project-buttons">
-            <a href="https://github.com/seuusuario/bebedouro" target="_blank" class="btn-code"><i class="fab fa-github"></i> Código</a>
-            <a href="https://seusite.com/bebedouro" target="_blank" class="btn-live"><i class="fas fa-external-link-alt"></i> Demo</a>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Projeto 2 -->
-      <article class="projeto-card">
-        <img src="images/robo-coletor.png" alt="Robô Coletor de Lixo Inteligente">
-        <div class="projeto-content">
-          <p>Robô capaz de identificar e recolher resíduos de forma autônoma usando sensores.</p>
-          <div class="tech-tags">
-            <span>Arduino</span><span>Sensor</span><span>Motor</span>
+        <!-- Projeto 2 -->
+        <article class="projeto-card">
+          <img src="images/robo-coletor.png" alt="Robô Coletor de Lixo Inteligente">
+          <div class="projeto-content">
+            <p>Robô capaz de identificar e recolher resíduos de forma autônoma usando sensores.</p>
+            <div class="tech-tags">
+              <span>Arduino</span><span>Sensor</span><span>Motor</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://github.com/seuusuario/robo-coletor" target="_blank" class="btn-code">Código</a>
+            </div>
           </div>
-          <div class="project-buttons">
-            <a href="https://github.com/seuusuario/robo-coletor" target="_blank" class="btn-code"><i class="fab fa-github"></i> Código</a>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Projeto 3 -->
-      <article class="projeto-card">
-        <img src="images/portfolio-proprio.png" alt="Portfólio próprio">
-        <div class="projeto-content">
-          <p>Meu portfólio pessoal desenvolvido com HTML, CSS e JS, com tema claro/escuro e animações.</p>
-          <div class="tech-tags">
-            <span>HTML</span><span>CSS</span><span>JS</span>
+        <!-- Projeto 3 -->
+        <article class="projeto-card">
+          <img src="images/portfolio-proprio.png" alt="Portfólio próprio">
+          <div class="projeto-content">
+            <p>Meu portfólio pessoal desenvolvido com HTML, CSS e JS, com tema claro/escuro e animações.</p>
+            <div class="tech-tags">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://github.com/seuusuario/portfolio" target="_blank" class="btn-code">Código</a>
+              <a href="https://seusite.com/portfolio" target="_blank" class="btn-live">Demo</a>
+            </div>
           </div>
-          <div class="project-buttons">
-            <a href="https://github.com/seuusuario/portfolio" target="_blank" class="btn-code"><i class="fab fa-github"></i> Código</a>
-            <a href="https://seusite.com/portfolio" target="_blank" class="btn-live"><i class="fas fa-external-link-alt"></i> Demo</a>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Projeto 4 -->
-      <article class="projeto-card">
-        <img src="images/stridetech.png" alt="Stridetech">
-        <div class="projeto-content">
-          <p>Projeto de e-commerce com carrinho, funcionalidades completas e design moderno.</p>
-          <div class="tech-tags">
-            <span>HTML</span><span>CSS</span><span>JS</span>
+        <!-- Projeto 4 -->
+        <article class="projeto-card">
+          <img src="images/stridetech.png" alt="Stridetech">
+          <div class="projeto-content">
+            <p>Projeto de e-commerce com carrinho, funcionalidades completas e design moderno.</p>
+            <div class="tech-tags">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://github.com/seuusuario/stridetech" target="_blank" class="btn-code">Código</a>
+              <a href="https://seusite.com/stridetech" target="_blank" class="btn-live">Demo</a>
+            </div>
           </div>
-          <div class="project-buttons">
-            <a href="https://github.com/seuusuario/stridetech" target="_blank" class="btn-code"><i class="fab fa-github"></i> Código</a>
-            <a href="https://seusite.com/stridetech" target="_blank" class="btn-live"><i class="fas fa-external-link-alt"></i> Demo</a>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Projeto 5 -->
-      <article class="projeto-card">
-        <img src="images/braco-joystick.png" alt="Braço robótico com joystick">
-        <div class="projeto-content">
-          <p>Controle manual do braço robótico usando joystick com precisão e movimentação suave.</p>
-          <div class="tech-tags">
-            <span>Arduino</span><span>Servo</span>
+        <!-- Projeto 5 -->
+        <article class="projeto-card">
+          <img src="images/braco-joystick.png" alt="Braço robótico com joystick">
+          <div class="projeto-content">
+            <p>Controle manual do braço robótico usando joystick com precisão e movimentação suave.</p>
+            <div class="tech-tags">
+              <span>Arduino</span><span>Servo</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://github.com/seuusuario/braco-joystick" target="_blank" class="btn-code">Código</a>
+            </div>
           </div>
-          <div class="project-buttons">
-            <a href="https://github.com/seuusuario/braco-joystick" target="_blank" class="btn-code"><i class="fab fa-github"></i> Código</a>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Projeto 6 -->
-      <article class="projeto-card">
-        <img src="images/carrinho-corrida.png" alt="Carrinho de corrida Univas">
-        <div class="projeto-content">
-          <p>Desenvolvimento e participação em campeonato de carrinhos de corrida controlados remotamente.</p>
-          <div class="tech-tags">
-            <span>Arduino</span><span>Motor</span><span>Chassi</span>
+        <!-- Projeto 6 -->
+        <article class="projeto-card">
+          <img src="images/carrinho-corrida.png" alt="Carrinho de corrida Univas">
+          <div class="projeto-content">
+            <p>Desenvolvimento e participação em campeonato de carrinhos de corrida controlados remotamente.</p>
+            <div class="tech-tags">
+              <span>Arduino</span><span>Motor</span><span>Chassi</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://github.com/seuusuario/carrinho-univas" target="_blank" class="btn-code">Código</a>
+            </div>
           </div>
-          <div class="project-buttons">
-            <a href="https://github.com/seuusuario/carrinho-univas" target="_blank" class="btn-code"><i class="fab fa-github"></i> Código</a>
+        </article>
+
+      </div>
+
+      <!-- Próximos Projetos -->
+      <div class="next-projects">
+        <h3>Próximos Projetos</h3>
+        <div class="next-projects-grid">
+          <div class="next-project-card">
+            <h4>Portfolio do meu irmão</h4>
+            <p>Em andamento<span class="loading-dots">...</span></p>
           </div>
-        </div>
-      </article>
-
-    </div>
-
-    <!-- Próximos Projetos -->
-    <div class="next-projects">
-      <h3>Próximos Projetos</h3>
-      <div class="next-projects-grid">
-        <div class="next-project-card">
-          <h4>Portfolio do meu irmão</h4>
-          <p>Em andamento<span class="loading-dots">...</span></p>
-        </div>
-        <div class="next-project-card">
-          <h4>Site sobre basquete</h4>
-          <p>Em andamento<span class="loading-dots">...</span></p>
-        </div>
-        <div class="next-project-card">
-          <h4>Site da escola</h4>
-          <p>Em andamento<span class="loading-dots">...</span></p>
+          <div class="next-project-card">
+            <h4>Site sobre basquete</h4>
+            <p>Em andamento<span class="loading-dots">...</span></p>
+          </div>
+          <div class="next-project-card">
+            <h4>Site da escola</h4>
+            <p>Em andamento<span class="loading-dots">...</span></p>
+          </div>
         </div>
       </div>
-    </div>
 
-  </section>
-
-
+    </section>
+  </main>
 
   <!-- Scripts -->
   <script src="script.js"></script>
