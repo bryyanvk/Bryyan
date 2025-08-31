@@ -134,14 +134,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ================== MENU HAMBÚRGUER ==================
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
+ const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
 
-  menuToggle.addEventListener("click", () => {
-    menuToggle.classList.toggle("active");
-    navLinks?.classList.toggle("show");
-  });
-
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active"); // anima o hambúrguer
+  navLinks.classList.toggle("show"); // mostra/esconde o menu
+});
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("show");
@@ -155,3 +154,46 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+const hamburger = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show"); // mostra/esconde o menu
+  hamburger.classList.toggle("active"); // anima o hambúrguer
+});
+
+// ================== ANIMAÇÃO DE PERCENTUAIS ==================
+document.addEventListener("DOMContentLoaded", () => {
+  const skillCircles = document.querySelectorAll(".skill-circle");
+
+  skillCircles.forEach(circle => {
+    const progress = circle.querySelector(".progress");
+    const percentEl = circle.querySelector(".percent");
+    const value = parseInt(circle.getAttribute("data-percent"), 10);
+
+    const radius = progress.r.baseVal.value; // raio do círculo
+    const circumference = 2 * Math.PI * radius;
+
+    // define o dasharray e dashoffset
+    progress.style.strokeDasharray = `${circumference}`;
+    progress.style.strokeDashoffset = `${circumference}`;
+
+    let current = 0;
+    const step = value / 100; // para animação suave
+
+    const animate = () => {
+      current++;
+      if (current > value) current = value;
+      const offset = circumference - (current / 100) * circumference;
+      progress.style.strokeDashoffset = offset;
+      percentEl.textContent = `${current}%`;
+      if (current < value) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    animate();
+  });
+  
+});
+
