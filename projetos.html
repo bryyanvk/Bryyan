@@ -12,28 +12,25 @@
 <body class="dark-theme">
 
   <!-- Header -->
-  <header>
-    <nav class="navbar">
-      <div class="logo"><h1 class="pulse">Portfolio</h1></div>
+  <header class="reveal">
+    <nav class="navbar reveal">
+      <div class="logo reveal"><h1 class="pulse reveal">Portfolio</h1></div>
 
-      <!-- Centered Links -->
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html"><i data-lucide="home"></i> Home</a></li>
-        <li><a href="sobre.html"><i data-lucide="user"></i> About</a></li>
-        <li><a href="habilidades.html"><i data-lucide="code"></i> Skills</a></li>
-        <li><a href="projetos.html" class="active"><i data-lucide="folder"></i> Projects</a></li>
-        <li><a href="contato.html"><i data-lucide="mail"></i> Contact</a></li>
+      <ul class="nav-links reveal" id="nav-links">
+        <li><a href="index.html" class="reveal"><i data-lucide="home"></i> Home</a></li>
+        <li><a href="sobre.html" class="reveal"><i data-lucide="user"></i> About</a></li>
+        <li><a href="habilidades.html" class="reveal"><i data-lucide="code"></i> Skills</a></li>
+        <li><a href="projetos.html" class="active reveal"><i data-lucide="folder"></i> Projects</a></li>
+        <li><a href="contato.html" class="reveal"><i data-lucide="mail"></i> Contact</a></li>
       </ul>
 
-      <!-- Theme Switcher -->
-      <div class="theme-container">
-        <button id="theme-light" class="theme-btn">☀️</button>
-        <button id="theme-dark" class="theme-btn">🌙</button>
-        <button id="theme-auto" class="theme-btn">🌓</button>
+      <div class="theme-container reveal">
+        <button id="theme-light" class="theme-btn reveal">☀️</button>
+        <button id="theme-dark" class="theme-btn reveal">🌙</button>
+        <button id="theme-auto" class="theme-btn reveal">🌓</button>
       </div>
 
-      <!-- Hamburger mobile -->
-      <div class="hamburger" id="menu-toggle">
+      <div class="hamburger reveal" id="menu-toggle">
         <div></div>
         <div></div>
         <div></div>
@@ -43,17 +40,27 @@
 
   <!-- Projects Section -->
   <main>
-    <section class="section projetos">
-      <h2 class="section-title pulse"><i data-lucide="folder"></i> Featured Projects</h2>
-      <p class="section-subtitle">
+    <section class="section projetos reveal">
+      <h2 class="section-title pulse reveal"><i data-lucide="folder"></i> Featured Projects</h2>
+      <p class="section-subtitle reveal">
         Here are some of my main projects, showing my skills and growth in programming and robotics.
       </p>
 
-      <div class="projetos-grid">
+      <!-- Filter Buttons -->
+      <div class="projects-filter reveal">
+        <span>Filtrar por:</span>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="arduino">Arduino</button>
+        <button class="filter-btn" data-filter="favorite">Favoritos</button>
+      </div>
 
+      <!-- Projects Grid -->
+      <div class="projetos-grid reveal">
         <!-- Project 1 -->
-        <article class="projeto-card">
-          <img src="bebedouro.jpg" alt="Smart Water Dispenser">
+        <article class="projeto-card reveal" data-id="projeto1" data-category="arduino">
+          <div class="favorite-btn" data-id="projeto1">★</div>
+          <img src="bebedouro.jpg" alt="Smart Water Dispenser" />
           <div class="projeto-content">
             <p>The smart water dispenser was designed to provide water in a practical and safe way. It uses sensors to automate its operation, ensuring hygiene and preventing waste. A modern solution that combines technology, health, and sustainability.</p>
             <div class="tech-tags">
@@ -69,8 +76,9 @@
         </article>
 
         <!-- Project 2 -->
-        <article class="projeto-card">
-          <img src="projeto.jpg" alt="Smart Trash Collector Robot">
+        <article class="projeto-card reveal" data-id="projeto2" data-category="arduino">
+          <div class="favorite-btn" data-id="projeto2">★</div>
+          <img src="projeto.jpg" alt="Smart Trash Collector Robot" />
           <div class="projeto-content">
             <p>Robot capable of identifying and collecting waste autonomously using sensors.</p>
             <div class="tech-tags">
@@ -85,8 +93,9 @@
         </article>
 
         <!-- Project 3 -->
-        <article class="projeto-card">
-          <img src="port.png" alt="Personal Portfolio">
+        <article class="projeto-card reveal" data-id="projeto3" data-category="web">
+          <div class="favorite-btn" data-id="projeto3">★</div>
+          <img src="port.png" alt="Personal Portfolio" />
           <div class="projeto-content">
             <p>My personal portfolio developed with HTML, CSS, and JS, featuring light/dark theme and animations.</p>
             <div class="tech-tags">
@@ -101,9 +110,10 @@
           </div>
         </article>
 
-        <!-- Project 4 -->
-        <article class="projeto-card">
-          <img src="images/stridetech.png" alt="Stridetech">
+        <!-- Hidden Projects -->
+        <article class="projeto-card reveal hidden-card" data-id="projeto4" data-category="web">
+          <div class="favorite-btn" data-id="projeto4">★</div>
+          <img src="images/stridetech.png" alt="Stridetech" />
           <div class="projeto-content">
             <p>E-commerce project with cart, full features, and modern design.</p>
             <div class="tech-tags">
@@ -118,9 +128,9 @@
           </div>
         </article>
 
-        <!-- Project 5 -->
-        <article class="projeto-card">
-          <img src="images/braco-joystick.png" alt="Robotic Arm with Joystick">
+        <article class="projeto-card reveal hidden-card" data-id="projeto5" data-category="arduino">
+          <div class="favorite-btn" data-id="projeto5">★</div>
+          <img src="images/braco-joystick.png" alt="Robotic Arm with Joystick" />
           <div class="projeto-content">
             <p>Manual control of the robotic arm using a joystick with precision and smooth movement.</p>
             <div class="tech-tags">
@@ -133,9 +143,9 @@
           </div>
         </article>
 
-        <!-- Project 6 -->
-        <article class="projeto-card">
-          <img src="images/carrinho-corrida.png" alt="Univas Racing Car">
+        <article class="projeto-card reveal hidden-card" data-id="projeto6" data-category="arduino">
+          <div class="favorite-btn" data-id="projeto6">★</div>
+          <img src="images/carrinho-corrida.png" alt="Univas Racing Car" />
           <div class="projeto-content">
             <p>Development and participation in a remote-controlled racing car championship.</p>
             <div class="tech-tags">
@@ -148,24 +158,30 @@
             </div>
           </div>
         </article>
-
       </div>
 
+      <!-- Botão Exibir mais / menos -->
+    <div class="more-projects-container">
+      <button id="show-more-btn" class="btn">Exibir mais</button>
+      <button id="show-less-btn" class="btn" style="display:none;">Exibir menos</button>
+    </div>
+
+
       <!-- Next Projects -->
-      <div class="next-projects">
-        <h3>Next Projects</h3>
+      <div class="next-projects reveal">
+        <h3 class="section-title pulse">Next Projects</h3>
         <div class="next-projects-grid">
-          <div class="next-project-card">
-            <h4>My brother's portfolio</h4>
-            <p>In progress<span class="loading-dots">...</span></p>
+          <div class="next-project-card reveal">
+            <h4 class="neon-title">My brother's portfolio</h4>
+            <p class="project-status">In progress<span class="loading-dots"></span></p>
           </div>
-          <div class="next-project-card">
-            <h4>Basketball website</h4>
-            <p>In progress<span class="loading-dots">...</span></p>
+          <div class="next-project-card reveal">
+            <h4 class="neon-title">Basketball website</h4>
+            <p class="project-status">In progress<span class="loading-dots"></span></p>
           </div>
-          <div class="next-project-card">
-            <h4>School website</h4>
-            <p>In progress<span class="loading-dots">...</span></p>
+          <div class="next-project-card reveal">
+            <h4 class="neon-title">School website</h4>
+            <p class="project-status">In progress<span class="loading-dots"></span></p>
           </div>
         </div>
       </div>
@@ -173,10 +189,7 @@
     </section>
   </main>
 
-  <!-- Scripts -->
+  <!-- Script -->
   <script src="script.js"></script>
-  <script>
-    lucide.createIcons();
-  </script>
 </body>
 </html>

@@ -12,31 +12,31 @@
 <body class="dark-theme">
 
   <!-- Header igual ao index -->
-  <header>
-    <nav class="navbar">
+  <header class="reveal">
+    <nav class="navbar reveal">
       <!-- Logo à esquerda -->
-      <div class="logo">
-        <h1 class="pulse">Portfolio</h1>
+      <div class="logo reveal">
+        <h1 class="pulse reveal">Portfolio</h1>
       </div>
 
       <!-- Links centralizados -->
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html"><i data-lucide="home"></i> Home</a></li>
-        <li><a href="sobre.html" class="active"><i data-lucide="user"></i> About</a></li>
-        <li><a href="habilidades.html"><i data-lucide="code"></i> Skills</a></li>
-        <li><a href="projetos.html"><i data-lucide="folder"></i> Projects</a></li>
-        <li><a href="contato.html"><i data-lucide="mail"></i> Contact</a></li>
+      <ul class="nav-links reveal" id="nav-links">
+        <li><a href="index.html" class="reveal"><i data-lucide="home"></i> Home</a></li>
+        <li><a href="sobre.html" class="active reveal"><i data-lucide="user"></i> About</a></li>
+        <li><a href="habilidades.html" class="reveal"><i data-lucide="code"></i> Skills</a></li>
+        <li><a href="projetos.html" class="reveal"><i data-lucide="folder"></i> Projects</a></li>
+        <li><a href="contato.html" class="reveal"><i data-lucide="mail"></i> Contact</a></li>
       </ul>
 
       <!-- Alternador de tema à direita -->
-      <div class="theme-container">
-        <button id="theme-light" class="theme-btn">☀️</button>
-        <button id="theme-dark" class="theme-btn">🌙</button>
-        <button id="theme-auto" class="theme-btn">🌓</button>
+      <div class="theme-container reveal">
+        <button id="theme-light" class="theme-btn reveal">☀️</button>
+        <button id="theme-dark" class="theme-btn reveal">🌙</button>
+        <button id="theme-auto" class="theme-btn reveal">🌓</button>
       </div>
 
       <!-- Hamburger mobile -->
-      <div class="hamburger" id="menu-toggle">
+      <div class="hamburger reveal" id="menu-toggle">
         <div></div>
         <div></div>
         <div></div>
@@ -46,18 +46,18 @@
 
   <!-- About Section -->
   <main>
-    <section class="section sobre">
-      <h2 class="section-title pulse"><i data-lucide="map-pin"></i> About me</h2>
+    <section class="section sobre reveal">
+      <h2 class="section-title pulse reveal"><i data-lucide="map-pin"></i> About me</h2>
 
-      <p class="primary-text">
+      <p class="primary-text reveal">
         I am currently a computer technician student, my goal is to study software engineering and become a game developer.
         Lately I've been delving deeper into the languages: Python, C++, HTML, CSS, and JavaScript.
       </p>
 
-      <p class="secondary-text">Always looking for challenges to be able to evolve further.</p>
-      <p class="secondary-text">Born in Santa Rita do Sapucaí, a 16-year-old programming nut.</p>
+      <p class="secondary-text reveal">Always looking for challenges to be able to evolve further.</p>
+      <p class="secondary-text reveal">Born in Santa Rita do Sapucaí, a 16-year-old programming nut.</p>
 
-      <div class="map-container">
+      <div class="map-container reveal">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14770.861092836802!2d-45.71276653408948!3d-22.250879325552248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cba24de6768243%3A0xbab272348222b906!2sSanta%20Rita%20do%20Sapuca%C3%AD%2C%20MG%2C%2037540-000!5e0!3m2!1spt-BR!2sbr!4v1755875562396!5m2!1spt-BR!2sbr"
           width="600"
@@ -69,11 +69,14 @@
         </iframe>
       </div>
 
-      <p class="project-available pulse"><i data-lucide="luggage"></i> Available for projects</p>
+      <p class="project-available pulse reveal"><i data-lucide="luggage"></i> Available for projects</p>
     </section>
   </main>
 
   <!-- Script único -->
   <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>

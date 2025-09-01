@@ -12,28 +12,28 @@
 <body class="dark-theme">
 
   <!-- Header -->
-  <header>
-    <nav class="navbar">
-      <div class="logo"><h1 class="pulse">Portfolio</h1></div>
+  <header class="reveal">
+    <nav class="navbar reveal">
+      <div class="logo reveal"><h1 class="pulse reveal">Portfolio</h1></div>
 
       <!-- Links centralizados -->
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html"><i data-lucide="home"></i> Home</a></li>
-        <li><a href="sobre.html"><i data-lucide="user"></i> About</a></li>
-        <li><a href="habilidades.html" class="active"><i data-lucide="code"></i> Skills</a></li>
-        <li><a href="projetos.html"><i data-lucide="folder"></i> Projects</a></li>
-        <li><a href="contato.html"><i data-lucide="mail"></i> Contact</a></li>
+      <ul class="nav-links reveal" id="nav-links">
+        <li><a href="index.html" class="reveal"><i data-lucide="home"></i> Home</a></li>
+        <li><a href="sobre.html" class="reveal"><i data-lucide="user"></i> About</a></li>
+        <li><a href="habilidades.html" class="active reveal"><i data-lucide="code"></i> Skills</a></li>
+        <li><a href="projetos.html" class="reveal"><i data-lucide="folder"></i> Projects</a></li>
+        <li><a href="contato.html" class="reveal"><i data-lucide="mail"></i> Contact</a></li>
       </ul>
 
       <!-- Alternador de tema -->
-      <div class="theme-container">
-        <button id="theme-light" class="theme-btn">☀️</button>
-        <button id="theme-dark" class="theme-btn">🌙</button>
-        <button id="theme-auto" class="theme-btn">🌓</button>
+      <div class="theme-container reveal">
+        <button id="theme-light" class="theme-btn reveal">☀️</button>
+        <button id="theme-dark" class="theme-btn reveal">🌙</button>
+        <button id="theme-auto" class="theme-btn reveal">🌓</button>
       </div>
 
       <!-- Hamburger mobile -->
-      <div class="hamburger" id="menu-toggle">
+      <div class="hamburger reveal" id="menu-toggle">
         <div></div>
         <div></div>
         <div></div>
@@ -43,161 +43,137 @@
 
   <!-- Skills Section -->
   <main>
-    <section class="section habilidades">
-  <h2 class="section-title pulse"><i data-lucide="code"></i> My Skills</h2>
-  <p class="section-subtitle">Here are some of my main skills and proficiency levels:</p>
+    <section class="section habilidades reveal">
+      <h2 class="section-title pulse reveal"><i data-lucide="code"></i> My Skills</h2>
+      <p class="section-subtitle reveal">Here are some of my main skills and proficiency levels:</p>
 
-  <!-- GRID DE SKILLS -->
-<div class="skills-grid">
-  <div class="skill-circle" data-percent="55">
-    <svg>
-      <circle class="bg" cx="50%" cy="50%" r="40"></circle>
-      <circle class="progress" cx="50%" cy="50%" r="40"></circle>
-    </svg>
-    <div class="skill-info">
-      <span class="percent">0%</span>
-    </div>
-    <p class="skill-name">JavaScript</p>
-  </div>
+      <!-- GRID DE SKILLS -->
+      <div class="skills-grid">
+        <div class="skill-circle reveal" data-percent="55">
+          <svg>
+            <circle class="bg" cx="50%" cy="50%" r="40"></circle>
+            <circle class="progress" cx="50%" cy="50%" r="40"></circle>
+          </svg>
+          <div class="skill-info"><span class="percent">0%</span></div>
+          <p class="skill-name">JavaScript</p>
+        </div>
 
-  <div class="skill-circle" data-percent="65">
-    <svg>
-      <circle class="bg" cx="50%" cy="50%" r="40"></circle>
-      <circle class="progress" cx="50%" cy="50%" r="40"></circle>
-    </svg>
-    <div class="skill-info">
-      <span class="percent">0%</span>
-    </div>
-    <p class="skill-name">CSS</p>
-  </div>
+        <div class="skill-circle reveal" data-percent="65">
+          <svg>
+            <circle class="bg" cx="50%" cy="50%" r="40"></circle>
+            <circle class="progress" cx="50%" cy="50%" r="40"></circle>
+          </svg>
+          <div class="skill-info"><span class="percent">0%</span></div>
+          <p class="skill-name">CSS</p>
+        </div>
 
-  <div class="skill-circle" data-percent="80">
-    <svg>
-      <circle class="bg" cx="50%" cy="50%" r="40"></circle>
-      <circle class="progress" cx="50%" cy="50%" r="40"></circle>
-    </svg>
-    <div class="skill-info">
-      <span class="percent">0%</span>
-    </div>
-    <p class="skill-name">HTML</p>
-  </div>
+        <div class="skill-circle reveal" data-percent="80">
+          <svg>
+            <circle class="bg" cx="50%" cy="50%" r="40"></circle>
+            <circle class="progress" cx="50%" cy="50%" r="40"></circle>
+          </svg>
+          <div class="skill-info"><span class="percent">0%</span></div>
+          <p class="skill-name">HTML</p>
+        </div>
 
-  <div class="skill-circle" data-percent="75">
-    <svg>
-      <circle class="bg" cx="50%" cy="50%" r="40"></circle>
-      <circle class="progress" cx="50%" cy="50%" r="40"></circle>
-    </svg>
-    <div class="skill-info">
-      <span class="percent">0%</span>
-    </div>
-    <p class="skill-name">Python</p>
-  </div>
-  
+        <div class="skill-circle reveal" data-percent="75">
+          <svg>
+            <circle class="bg" cx="50%" cy="50%" r="40"></circle>
+            <circle class="progress" cx="50%" cy="50%" r="40"></circle>
+          </svg>
+          <div class="skill-info"><span class="percent">0%</span></div>
+          <p class="skill-name">Python</p>
+        </div>
 
-  <div class="skill-circle" data-percent="40">
-    <svg>
-      <circle class="bg" cx="50%" cy="50%" r="40"></circle>
-      <circle class="progress" cx="50%" cy="50%" r="40"></circle>
-    </svg>
-    <div class="skill-info">
-      <span class="percent">0%</span>
-    </div>
-    <p class="skill-name">Git & GitHub</p>
-  </div>
-  <div class="skill-circle" data-percent="70">
-  <svg>
-    <circle class="bg" cx="50%" cy="50%" r="40"></circle>
-    <circle class="progress" cx="50%" cy="50%" r="40"></circle>
-  </svg>
-  <div class="skill-info">
-    <span class="percent">0%</span>
-  </div>
-  <p class="skill-name">C++</p>
-</div>
+        <div class="skill-circle reveal" data-percent="40">
+          <svg>
+            <circle class="bg" cx="50%" cy="50%" r="40"></circle>
+            <circle class="progress" cx="50%" cy="50%" r="40"></circle>
+          </svg>
+          <div class="skill-info"><span class="percent">0%</span></div>
+          <p class="skill-name">Git & GitHub</p>
+        </div>
 
-<div class="skill-circle" data-percent="30">
-  <svg>
-    <circle class="bg" cx="50%" cy="50%" r="40"></circle>
-    <circle class="progress" cx="50%" cy="50%" r="40"></circle>
-  </svg>
-  <div class="skill-info">
-    <span class="percent">0%</span>
-  </div>
-  <p class="skill-name">Unity</p>
-</div>
+        <div class="skill-circle reveal" data-percent="70">
+          <svg>
+            <circle class="bg" cx="50%" cy="50%" r="40"></circle>
+            <circle class="progress" cx="50%" cy="50%" r="40"></circle>
+          </svg>
+          <div class="skill-info"><span class="percent">0%</span></div>
+          <p class="skill-name">C++</p>
+        </div>
 
-<div class="skill-circle" data-percent="25">
-  <svg>
-    <circle class="bg" cx="50%" cy="50%" r="40"></circle>
-    <circle class="progress" cx="50%" cy="50%" r="40"></circle>
-  </svg>
-  <div class="skill-info">
-    <span class="percent">0%</span>
-  </div>
-  <p class="skill-name">Blender</p>
-</div>
+        <div class="skill-circle reveal" data-percent="30">
+          <svg>
+            <circle class="bg" cx="50%" cy="50%" r="40"></circle>
+            <circle class="progress" cx="50%" cy="50%" r="40"></circle>
+          </svg>
+          <div class="skill-info"><span class="percent">0%</span></div>
+          <p class="skill-name">Unity</p>
+        </div>
 
-<div class="skill-circle" data-percent="20">
-  <svg>
-    <circle class="bg" cx="50%" cy="50%" r="40"></circle>
-    <circle class="progress" cx="50%" cy="50%" r="40"></circle>
-  </svg>
-  <div class="skill-info">
-    <span class="percent">0%</span>
-  </div>
-  <p class="skill-name">VSCode</p>
-</div>
+        <div class="skill-circle reveal" data-percent="25">
+          <svg>
+            <circle class="bg" cx="50%" cy="50%" r="40"></circle>
+            <circle class="progress" cx="50%" cy="50%" r="40"></circle>
+          </svg>
+          <div class="skill-info"><span class="percent">0%</span></div>
+          <p class="skill-name">Blender</p>
+        </div>
 
-<div class="skill-circle" data-percent="15">
-  <svg>
-    <circle class="bg" cx="50%" cy="50%" r="40"></circle>
-    <circle class="progress" cx="50%" cy="50%" r="40"></circle>
-  </svg>
-  <div class="skill-info">
-    <span class="percent">0%</span>
-  </div>
-  <p class="skill-name">Canva</p>
-</div>
+        <div class="skill-circle reveal" data-percent="20">
+          <svg>
+            <circle class="bg" cx="50%" cy="50%" r="40"></circle>
+            <circle class="progress" cx="50%" cy="50%" r="40"></circle>
+          </svg>
+          <div class="skill-info"><span class="percent">0%</span></div>
+          <p class="skill-name">VSCode</p>
+        </div>
 
-</div>
+        <div class="skill-circle reveal" data-percent="15">
+          <svg>
+            <circle class="bg" cx="50%" cy="50%" r="40"></circle>
+            <circle class="progress" cx="50%" cy="50%" r="40"></circle>
+          </svg>
+          <div class="skill-info"><span class="percent">0%</span></div>
+          <p class="skill-name">Canva</p>
+        </div>
+      </div>
 
+      <!-- FERRAMENTAS -->
+      <div class="tools-section reveal">
+        <h3>Ferramentas que uso</h3>
+        <div class="tools-buttons">
+          <button class="reveal">HTML</button>
+          <button class="reveal">CSS</button>
+          <button class="reveal">JavaScript</button>
+          <button class="reveal">GitHub</button>
+          <button class="reveal">Canva</button>
+          <button class="reveal">VSCode</button>
+          <button class="reveal">Excel</button>
+          <button class="reveal">Unity</button>
+          <button class="reveal">Blender</button>
+          <button class="reveal">Python</button>
+        </div>
+      </div>
 
+      <!-- Aprendendo agora -->
+      <div class="learning-section reveal">
+        <h3>Aprendendo agora</h3>
+        <div class="learning-buttons">
+          <button class="reveal">Controle PID</button>
+          <button class="reveal">Machine Learning</button>
+          <button class="reveal">IA aplicada a jogos</button>
+        </div>
+      </div>
 
-
-  <!-- FERRAMENTAS -->
-<!-- Ferramentas que uso -->
-<div class="tools-section">
-  <h3>Ferramentas que uso</h3>
-  <div class="tools-buttons">
-    <button>HTML</button>
-    <button>CSS</button>
-    <button>JavaScript</button>
-    <button>GitHub</button>
-    <button>Canva</button>
-    <button>VSCode</button>
-    <button>Excel</button>
-    <button>Unity</button>
-    <button>Blender</button>
-    <button>Python</button>
-  </div>
-</div>
-
-<!-- Aprendendo agora -->
-<div class="learning-section">
-  <h3>Aprendendo agora</h3>
-  <div class="learning-buttons">
-    <button>Controle PID</button>
-    <button>Machine Learning</button>
-    <button>IA aplicada a jogos</button>
-  </div>
-</div>
-
-</section>
-
+    </section>
   </main>
-  
 
   <!-- Scripts -->
   <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>

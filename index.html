@@ -9,34 +9,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
+<body class="dark-theme">
 
   <!-- Header -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <h1 class="pulse">Portfolio</h1>
+  <header class="reveal">
+    <nav class="navbar reveal">
+      <div class="logo reveal">
+        <h1 class="pulse reveal">Portfolio</h1>
       </div>
 
-
       <!-- Navegação -->
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="active"><i data-lucide="home"></i> Home</a></li>
-        <li><a href="sobre.html"><i data-lucide="user"></i> About</a></li>
-        <li><a href="habilidades.html"><i data-lucide="code"></i> Skills</a></li>
-        <li><a href="projetos.html"><i data-lucide="folder"></i> Projects</a></li>
-        <li><a href="contato.html"><i data-lucide="mail"></i> Contact</a></li>
+      <ul class="nav-links reveal" id="nav-links">
+        <li><a href="index.html" class="active reveal"><i data-lucide="home"></i> Home</a></li>
+        <li><a href="sobre.html" class="reveal"><i data-lucide="user"></i> About</a></li>
+        <li><a href="habilidades.html" class="reveal"><i data-lucide="code"></i> Skills</a></li>
+        <li><a href="projetos.html" class="reveal"><i data-lucide="folder"></i> Projects</a></li>
+        <li><a href="contato.html" class="reveal"><i data-lucide="mail"></i> Contact</a></li>
       </ul>
 
       <!-- Botão alternador de tema -->
-      <div class="theme-container">
-        <button id="theme-light" class="theme-btn">☀️</button>
-        <button id="theme-dark" class="theme-btn">🌙</button>
-        <button id="theme-auto" class="theme-btn">🌓</button>
+      <div class="theme-container reveal">
+        <button id="theme-light" class="theme-btn reveal">☀️</button>
+        <button id="theme-dark" class="theme-btn reveal">🌙</button>
+        <button id="theme-auto" class="theme-btn reveal">🌓</button>
       </div>
 
       <!-- Botão hambúrguer (mobile) -->
-      <div class="hamburger" id="menu-toggle">
+      <div class="hamburger reveal" id="menu-toggle">
         <div></div>
         <div></div>
         <div></div>
@@ -45,28 +44,31 @@
   </header>
 
   <!-- Hero / Intro -->
-  <section class="section inicio">
-    <div class="intro">
-      <h2><i data-lucide="home"></i> Welcome to my Portfolio</h2>
-      <p>
+  <section class="section inicio reveal">
+    <div class="intro reveal">
+      <h2 class="reveal"><i data-lucide="home"></i> Welcome to my Portfolio</h2>
+      <p class="reveal">
         Developer passionate about technology, futuristic design, and creating unique digital experiences.
       </p>
     </div>
 
-    <div class="foto-container">
-      <h3 class="user-name">Bryyan Leandro Rosa</h3>
-      <img src="euu.jpg" alt="Photo of Bryyan" class="user-foto" />
-      <p class="user-role">Estudante de TI</p>
+    <div class="foto-container reveal">
+      <h3 class="user-name reveal">Bryyan Leandro Rosa</h3>
+      <img src="euu.jpg" alt="Photo of Bryyan" class="user-foto reveal" />
+      <p class="user-role reveal">Estudante de TI</p>
     </div>
 
-    <div class="botoes-navegacao">
-      <a href="sobre.html" class="btn-section">About Me</a>
-      <a href="projetos.html" class="btn-section">Projects</a>
-      <a href="contato.html" class="btn-section">Contact</a>
+    <div class="botoes-navegacao reveal">
+      <a href="sobre.html" class="btn-section reveal">About Me</a>
+      <a href="projetos.html" class="btn-section reveal">Projects</a>
+      <a href="contato.html" class="btn-section reveal">Contact</a>
     </div>
   </section>
 
   <!-- Scripts -->
   <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
